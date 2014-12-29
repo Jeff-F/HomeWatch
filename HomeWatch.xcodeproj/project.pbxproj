@@ -13,6 +13,13 @@
 		57E3F1541A51CB7400C068FC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57E3F1531A51CB7400C068FC /* Images.xcassets */; };
 		57E3F1571A51CB7400C068FC /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 57E3F1551A51CB7400C068FC /* LaunchScreen.xib */; };
 		57E3F1631A51CB7400C068FC /* HomeWatchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E3F1621A51CB7400C068FC /* HomeWatchTests.swift */; };
+		57E3F1761A51CBA100C068FC /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E3F1751A51CBA100C068FC /* InterfaceController.swift */; };
+		57E3F1781A51CBA100C068FC /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E3F1771A51CBA100C068FC /* NotificationController.swift */; };
+		57E3F17A1A51CBA100C068FC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57E3F1791A51CBA100C068FC /* Images.xcassets */; };
+		57E3F17E1A51CBA100C068FC /* HomeWatch WatchKit App.app in Resources */ = {isa = PBXBuildFile; fileRef = 57E3F17D1A51CBA100C068FC /* HomeWatch WatchKit App.app */; };
+		57E3F1861A51CBA100C068FC /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57E3F1841A51CBA100C068FC /* Interface.storyboard */; };
+		57E3F1881A51CBA100C068FC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57E3F1871A51CBA100C068FC /* Images.xcassets */; };
+		57E3F18B1A51CBA100C068FC /* HomeWatch WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 57E3F1701A51CBA100C068FC /* HomeWatch WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -23,7 +30,35 @@
 			remoteGlobalIDString = 57E3F1461A51CB7400C068FC;
 			remoteInfo = HomeWatch;
 		};
+		57E3F17F1A51CBA100C068FC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 57E3F13F1A51CB7400C068FC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 57E3F17C1A51CBA100C068FC;
+			remoteInfo = "HomeWatch WatchKit App";
+		};
+		57E3F1891A51CBA100C068FC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 57E3F13F1A51CB7400C068FC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 57E3F16F1A51CBA100C068FC;
+			remoteInfo = "HomeWatch WatchKit Extension";
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		57E3F1921A51CBA100C068FC /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				57E3F18B1A51CBA100C068FC /* HomeWatch WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		57E3F1471A51CB7400C068FC /* HomeWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HomeWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -36,6 +71,16 @@
 		57E3F15C1A51CB7400C068FC /* HomeWatchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HomeWatchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		57E3F1611A51CB7400C068FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		57E3F1621A51CB7400C068FC /* HomeWatchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeWatchTests.swift; sourceTree = "<group>"; };
+		57E3F1701A51CBA100C068FC /* HomeWatch WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "HomeWatch WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		57E3F1731A51CBA100C068FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		57E3F1741A51CBA100C068FC /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		57E3F1751A51CBA100C068FC /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		57E3F1771A51CBA100C068FC /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		57E3F1791A51CBA100C068FC /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		57E3F17D1A51CBA100C068FC /* HomeWatch WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HomeWatch WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		57E3F1831A51CBA100C068FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		57E3F1851A51CBA100C068FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		57E3F1871A51CBA100C068FC /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +98,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		57E3F16D1A51CBA100C068FC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -61,6 +113,8 @@
 			children = (
 				57E3F1491A51CB7400C068FC /* HomeWatch */,
 				57E3F15F1A51CB7400C068FC /* HomeWatchTests */,
+				57E3F1711A51CBA100C068FC /* HomeWatch WatchKit Extension */,
+				57E3F1811A51CBA100C068FC /* HomeWatch WatchKit App */,
 				57E3F1481A51CB7400C068FC /* Products */,
 			);
 			sourceTree = "<group>";
@@ -70,6 +124,8 @@
 			children = (
 				57E3F1471A51CB7400C068FC /* HomeWatch.app */,
 				57E3F15C1A51CB7400C068FC /* HomeWatchTests.xctest */,
+				57E3F1701A51CBA100C068FC /* HomeWatch WatchKit Extension.appex */,
+				57E3F17D1A51CBA100C068FC /* HomeWatch WatchKit App.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -112,6 +168,44 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		57E3F1711A51CBA100C068FC /* HomeWatch WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				57E3F1751A51CBA100C068FC /* InterfaceController.swift */,
+				57E3F1771A51CBA100C068FC /* NotificationController.swift */,
+				57E3F1791A51CBA100C068FC /* Images.xcassets */,
+				57E3F1721A51CBA100C068FC /* Supporting Files */,
+			);
+			path = "HomeWatch WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		57E3F1721A51CBA100C068FC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				57E3F1731A51CBA100C068FC /* Info.plist */,
+				57E3F1741A51CBA100C068FC /* PushNotificationPayload.apns */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		57E3F1811A51CBA100C068FC /* HomeWatch WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				57E3F1841A51CBA100C068FC /* Interface.storyboard */,
+				57E3F1871A51CBA100C068FC /* Images.xcassets */,
+				57E3F1821A51CBA100C068FC /* Supporting Files */,
+			);
+			path = "HomeWatch WatchKit App";
+			sourceTree = "<group>";
+		};
+		57E3F1821A51CBA100C068FC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				57E3F1831A51CBA100C068FC /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -122,10 +216,12 @@
 				57E3F1431A51CB7400C068FC /* Sources */,
 				57E3F1441A51CB7400C068FC /* Frameworks */,
 				57E3F1451A51CB7400C068FC /* Resources */,
+				57E3F1921A51CBA100C068FC /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				57E3F18A1A51CBA100C068FC /* PBXTargetDependency */,
 			);
 			name = HomeWatch;
 			productName = HomeWatch;
@@ -150,6 +246,39 @@
 			productReference = 57E3F15C1A51CB7400C068FC /* HomeWatchTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		57E3F16F1A51CBA100C068FC /* HomeWatch WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 57E3F18F1A51CBA100C068FC /* Build configuration list for PBXNativeTarget "HomeWatch WatchKit Extension" */;
+			buildPhases = (
+				57E3F16C1A51CBA100C068FC /* Sources */,
+				57E3F16D1A51CBA100C068FC /* Frameworks */,
+				57E3F16E1A51CBA100C068FC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				57E3F1801A51CBA100C068FC /* PBXTargetDependency */,
+			);
+			name = "HomeWatch WatchKit Extension";
+			productName = "HomeWatch WatchKit Extension";
+			productReference = 57E3F1701A51CBA100C068FC /* HomeWatch WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit-extension";
+		};
+		57E3F17C1A51CBA100C068FC /* HomeWatch WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 57E3F18C1A51CBA100C068FC /* Build configuration list for PBXNativeTarget "HomeWatch WatchKit App" */;
+			buildPhases = (
+				57E3F17B1A51CBA100C068FC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "HomeWatch WatchKit App";
+			productName = "HomeWatch WatchKit App";
+			productReference = 57E3F17D1A51CBA100C068FC /* HomeWatch WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -165,6 +294,12 @@
 					57E3F15B1A51CB7400C068FC = {
 						CreatedOnToolsVersion = 6.2;
 						TestTargetID = 57E3F1461A51CB7400C068FC;
+					};
+					57E3F16F1A51CBA100C068FC = {
+						CreatedOnToolsVersion = 6.2;
+					};
+					57E3F17C1A51CBA100C068FC = {
+						CreatedOnToolsVersion = 6.2;
 					};
 				};
 			};
@@ -183,6 +318,8 @@
 			targets = (
 				57E3F1461A51CB7400C068FC /* HomeWatch */,
 				57E3F15B1A51CB7400C068FC /* HomeWatchTests */,
+				57E3F16F1A51CBA100C068FC /* HomeWatch WatchKit Extension */,
+				57E3F17C1A51CBA100C068FC /* HomeWatch WatchKit App */,
 			);
 		};
 /* End PBXProject section */
@@ -202,6 +339,24 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		57E3F16E1A51CBA100C068FC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				57E3F17A1A51CBA100C068FC /* Images.xcassets in Resources */,
+				57E3F17E1A51CBA100C068FC /* HomeWatch WatchKit App.app in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		57E3F17B1A51CBA100C068FC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				57E3F1861A51CBA100C068FC /* Interface.storyboard in Resources */,
+				57E3F1881A51CBA100C068FC /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -225,6 +380,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		57E3F16C1A51CBA100C068FC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				57E3F1781A51CBA100C068FC /* NotificationController.swift in Sources */,
+				57E3F1761A51CBA100C068FC /* InterfaceController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -232,6 +396,16 @@
 			isa = PBXTargetDependency;
 			target = 57E3F1461A51CB7400C068FC /* HomeWatch */;
 			targetProxy = 57E3F15D1A51CB7400C068FC /* PBXContainerItemProxy */;
+		};
+		57E3F1801A51CBA100C068FC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 57E3F17C1A51CBA100C068FC /* HomeWatch WatchKit App */;
+			targetProxy = 57E3F17F1A51CBA100C068FC /* PBXContainerItemProxy */;
+		};
+		57E3F18A1A51CBA100C068FC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 57E3F16F1A51CBA100C068FC /* HomeWatch WatchKit Extension */;
+			targetProxy = 57E3F1891A51CBA100C068FC /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -250,6 +424,14 @@
 				57E3F1561A51CB7400C068FC /* Base */,
 			);
 			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+		57E3F1841A51CBA100C068FC /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				57E3F1851A51CBA100C068FC /* Base */,
+			);
+			name = Interface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -336,6 +518,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = HomeWatch/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -346,6 +529,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = HomeWatch/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -386,6 +570,62 @@
 			};
 			name = Release;
 		};
+		57E3F18D1A51CBA100C068FC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				IBSC_MODULE = HomeWatch_WatchKit_Extension;
+				INFOPLIST_FILE = "HomeWatch WatchKit App/Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
+			};
+			name = Debug;
+		};
+		57E3F18E1A51CBA100C068FC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				IBSC_MODULE = HomeWatch_WatchKit_Extension;
+				INFOPLIST_FILE = "HomeWatch WatchKit App/Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
+			};
+			name = Release;
+		};
+		57E3F1901A51CBA100C068FC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "HomeWatch WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		57E3F1911A51CBA100C068FC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "HomeWatch WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -411,6 +651,22 @@
 			buildConfigurations = (
 				57E3F16A1A51CB7400C068FC /* Debug */,
 				57E3F16B1A51CB7400C068FC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		57E3F18C1A51CBA100C068FC /* Build configuration list for PBXNativeTarget "HomeWatch WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				57E3F18D1A51CBA100C068FC /* Debug */,
+				57E3F18E1A51CBA100C068FC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		57E3F18F1A51CBA100C068FC /* Build configuration list for PBXNativeTarget "HomeWatch WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				57E3F1901A51CBA100C068FC /* Debug */,
+				57E3F1911A51CBA100C068FC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
