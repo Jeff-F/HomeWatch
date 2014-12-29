@@ -8,10 +8,14 @@
 
 import WatchKit
 import Foundation
-
+import LampController
 
 class InterfaceController: WKInterfaceController {
 
+	@IBOutlet weak var lamp1Button: WKInterfaceButton!
+	@IBOutlet weak var lamp2Button: WKInterfaceButton!
+	@IBOutlet weak var lamp3Button: WKInterfaceButton!
+	
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
         
@@ -28,4 +32,15 @@ class InterfaceController: WKInterfaceController {
         super.didDeactivate()
     }
 
+	@IBAction func lamp1ButtonTapped() {
+	}
+	
+	@IBAction func lamp2ButtonTapped() {
+	}
+	
+	@IBAction func lamp3ButtonTapped() {
+	}
+	
+	private 
+	
 }
