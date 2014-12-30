@@ -1,14 +1,54 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="6221" systemVersion="14A389" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="6724" systemVersion="14C81f" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6213"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="3734"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6711"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="3735"/>
     </dependencies>
     <scenes>
         <!--Interface Controller-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModuleProvider="target"/>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="HomeWatch_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <group width="1" alignment="left" id="ash-6x-uPY">
+                            <items>
+                                <label alignment="center" verticalAlignment="center" text="Lamp 1" id="ISY-Dz-kQz"/>
+                                <button width="32" height="32" alignment="center" backgroundImage="light-bulb-off" id="nsL-TL-Z1g">
+                                    <connections>
+                                        <action selector="lamp1ButtonTapped" destination="AgC-eL-Hgc" id="Sob-0M-rOc"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                        <separator alignment="left" id="4Wd-xd-3ze"/>
+                        <group width="1" alignment="left" id="9nW-Sw-Nco">
+                            <items>
+                                <label alignment="center" verticalAlignment="center" text="Lamp 2" id="xns-7W-FbG"/>
+                                <button width="32" height="32" alignment="center" backgroundImage="light-bulb-off" id="tex-fW-7PZ">
+                                    <connections>
+                                        <action selector="lamp2ButtonTapped" destination="AgC-eL-Hgc" id="hJM-OH-kqN"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                        <separator alignment="left" id="RYM-fO-QU4"/>
+                        <group width="1" alignment="left" id="k5g-kF-qjn">
+                            <items>
+                                <label alignment="center" verticalAlignment="center" text="Lamp 3" id="OmR-Z5-xYu"/>
+                                <button width="32" height="32" alignment="center" backgroundImage="light-bulb-off" id="EsS-qe-w3u">
+                                    <connections>
+                                        <action selector="lamp3ButtonTapped" destination="AgC-eL-Hgc" id="Rb2-0V-E5x"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="lamp1Button" destination="nsL-TL-Z1g" id="U2P-yl-2uj"/>
+                        <outlet property="lamp2Button" destination="tex-fW-7PZ" id="EcJ-Uv-J5r"/>
+                        <outlet property="lamp3Button" destination="EsS-qe-w3u" id="EZ4-sz-dzF"/>
+                    </connections>
+                </controller>
             </objects>
             <point key="canvasLocation" x="220" y="345"/>
         </scene>
@@ -31,7 +71,7 @@
         <!--Notification Controller-->
         <scene sceneID="ZPc-GJ-vnh">
             <objects>
-                <controller id="4sK-HA-Art" customClass="NotificationController" customModuleProvider="target"/>
+                <controller id="4sK-HA-Art" customClass="NotificationController" customModule="HomeWatch_WatchKit_App" customModuleProvider="target"/>
             </objects>
             <point key="canvasLocation" x="468" y="643"/>
         </scene>
