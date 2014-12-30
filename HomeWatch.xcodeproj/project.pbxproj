@@ -20,8 +20,9 @@
 		57E3F1861A51CBA100C068FC /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57E3F1841A51CBA100C068FC /* Interface.storyboard */; };
 		57E3F1881A51CBA100C068FC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57E3F1871A51CBA100C068FC /* Images.xcassets */; };
 		57E3F18B1A51CBA100C068FC /* HomeWatch WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 57E3F1701A51CBA100C068FC /* HomeWatch WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		57E3F1941A5213D500C068FC /* LampController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E3F1931A5213D500C068FC /* LampController.swift */; };
 		57E3F1971A52150C00C068FC /* HomeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57E3F1961A52150C00C068FC /* HomeKit.framework */; };
+		57E3F19B1A52283B00C068FC /* LampController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E3F19A1A52283B00C068FC /* LampController.swift */; };
+		57E3F19D1A522EA600C068FC /* Lamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E3F19C1A522EA600C068FC /* Lamp.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,9 +84,10 @@
 		57E3F1831A51CBA100C068FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		57E3F1851A51CBA100C068FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
 		57E3F1871A51CBA100C068FC /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		57E3F1931A5213D500C068FC /* LampController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LampController.swift; sourceTree = "<group>"; };
 		57E3F1951A52150C00C068FC /* HomeWatch.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = HomeWatch.entitlements; sourceTree = "<group>"; };
 		57E3F1961A52150C00C068FC /* HomeKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HomeKit.framework; path = System/Library/Frameworks/HomeKit.framework; sourceTree = SDKROOT; };
+		57E3F19A1A52283B00C068FC /* LampController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LampController.swift; sourceTree = "<group>"; };
+		57E3F19C1A522EA600C068FC /* Lamp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lamp.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,7 +149,6 @@
 				57E3F1531A51CB7400C068FC /* Images.xcassets */,
 				57E3F1551A51CB7400C068FC /* LaunchScreen.xib */,
 				57E3F14A1A51CB7400C068FC /* Supporting Files */,
-				57E3F1931A5213D500C068FC /* LampController.swift */,
 			);
 			path = HomeWatch;
 			sourceTree = "<group>";
@@ -184,6 +185,8 @@
 				57E3F1771A51CBA100C068FC /* NotificationController.swift */,
 				57E3F1791A51CBA100C068FC /* Images.xcassets */,
 				57E3F1721A51CBA100C068FC /* Supporting Files */,
+				57E3F19A1A52283B00C068FC /* LampController.swift */,
+				57E3F19C1A522EA600C068FC /* Lamp.swift */,
 			);
 			path = "HomeWatch WatchKit Extension";
 			sourceTree = "<group>";
@@ -383,7 +386,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				57E3F1941A5213D500C068FC /* LampController.swift in Sources */,
 				57E3F14F1A51CB7400C068FC /* ViewController.swift in Sources */,
 				57E3F14D1A51CB7400C068FC /* AppDelegate.swift in Sources */,
 			);
@@ -401,8 +403,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57E3F19B1A52283B00C068FC /* LampController.swift in Sources */,
 				57E3F1781A51CBA100C068FC /* NotificationController.swift in Sources */,
 				57E3F1761A51CBA100C068FC /* InterfaceController.swift in Sources */,
+				57E3F19D1A522EA600C068FC /* Lamp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -666,6 +670,7 @@
 				57E3F1681A51CB7400C068FC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		57E3F1691A51CB7400C068FC /* Build configuration list for PBXNativeTarget "HomeWatchTests" */ = {
 			isa = XCConfigurationList;
@@ -674,6 +679,7 @@
 				57E3F16B1A51CB7400C068FC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		57E3F18C1A51CBA100C068FC /* Build configuration list for PBXNativeTarget "HomeWatch WatchKit App" */ = {
 			isa = XCConfigurationList;
@@ -682,6 +688,7 @@
 				57E3F18E1A51CBA100C068FC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		57E3F18F1A51CBA100C068FC /* Build configuration list for PBXNativeTarget "HomeWatch WatchKit Extension" */ = {
 			isa = XCConfigurationList;
@@ -690,6 +697,7 @@
 				57E3F1911A51CBA100C068FC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

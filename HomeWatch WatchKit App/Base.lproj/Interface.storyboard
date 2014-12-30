@@ -24,7 +24,7 @@
                         <group width="1" alignment="left" id="9nW-Sw-Nco">
                             <items>
                                 <label alignment="center" verticalAlignment="center" text="Lamp 2" id="xns-7W-FbG"/>
-                                <button width="32" height="32" alignment="center" backgroundImage="light-bulb-on" id="tex-fW-7PZ">
+                                <button width="32" height="32" alignment="center" backgroundImage="light-bulb-off" id="tex-fW-7PZ">
                                     <connections>
                                         <action selector="lamp2ButtonTapped" destination="AgC-eL-Hgc" id="hJM-OH-kqN"/>
                                     </connections>
@@ -46,7 +46,6 @@
                     <connections>
                         <outlet property="lamp1Button" destination="nsL-TL-Z1g" id="U2P-yl-2uj"/>
                         <outlet property="lamp2Button" destination="tex-fW-7PZ" id="EcJ-Uv-J5r"/>
-                        <outlet property="lamp2ButtonTapped" destination="tex-fW-7PZ" id="aNP-cM-tu8"/>
                         <outlet property="lamp3Button" destination="EsS-qe-w3u" id="EZ4-sz-dzF"/>
                     </connections>
                 </controller>

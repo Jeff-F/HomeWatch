@@ -8,9 +8,14 @@
 
 import WatchKit
 import Foundation
-import LampController
 
 class InterfaceController: WKInterfaceController {
+	
+	var lamp1 = Lamp(id: 1, state: false),
+	    lamp2 = Lamp(id: 2, state: false),
+        lamp3 = Lamp(id: 3, state: false);
+	
+	let lampController = LampController()
 
 	@IBOutlet weak var lamp1Button: WKInterfaceButton!
 	@IBOutlet weak var lamp2Button: WKInterfaceButton!
@@ -20,6 +25,8 @@ class InterfaceController: WKInterfaceController {
         super.awakeWithContext(context)
         
         // Configure interface objects here.
+		
+		self.updateLampStates();
     }
 
     override func willActivate() {
@@ -33,14 +40,23 @@ class InterfaceController: WKInterfaceController {
     }
 
 	@IBAction func lamp1ButtonTapped() {
+		lampController.switchLampState(lamp1)
+		updateLampStates()
 	}
 	
 	@IBAction func lamp2ButtonTapped() {
+		lampController.switchLampState(lamp2)
+		updateLampStates()
 	}
 	
 	@IBAction func lamp3ButtonTapped() {
+		lampController.switchLampState(lamp3)
+		updateLampStates()
 	}
 	
-	private 
-	
+	private func updateLampStates() {
+		lamp1Button.setBackgroundImageNamed(lamp1.getState() ? "light-bulb-on" : "light-bulb-off")
+		lamp2Button.setBackgroundImageNamed(lamp2.getState() ? "light-bulb-on" : "light-bulb-off")
+		lamp3Button.setBackgroundImageNamed(lamp3.getState() ? "light-bulb-on" : "light-bulb-off")
+	}
 }

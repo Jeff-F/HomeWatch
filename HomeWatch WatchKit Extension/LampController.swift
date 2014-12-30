@@ -10,14 +10,12 @@ import Foundation
 
 class LampController {
 	
-	static func isLampOn(lamp : Int) -> Bool {
-		switch lamp {
-		case 1 :
-			return true
-		case 2 :
-			return false
-		case 3 :
-			return true
-		}
+	func switchLampState(lamp : Lamp) -> Bool {
+		return lamp.switchState();
 	}
+	
+	func getLampState(lamp : Lamp) -> Bool {
+		return lamp.getState()
+	}
+		
 }
