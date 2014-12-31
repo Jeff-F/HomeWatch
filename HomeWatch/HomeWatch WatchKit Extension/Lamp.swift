@@ -27,4 +27,8 @@ class Lamp {
 		return self.state
 	}
 	
+	func getId() -> Int {
+		return self.id
+	}
+	
 }
