@@ -1,0 +1,618 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B0E8B5211A04C0F000DEF6E3 /* ZonesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E8B5201A04C0F000DEF6E3 /* ZonesViewController.swift */; };
+		CC130808197DEFDD0049EA96 /* HomeKitDefines.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC130807197DEFDD0049EA96 /* HomeKitDefines.swift */; };
+		CC1BE94A198CB008008E9193 /* TriggerCreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1BE949198CB008008E9193 /* TriggerCreateViewController.swift */; };
+		CC1BE94C198CBEF0008E9193 /* TriggersAndActionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1BE94B198CBEF0008E9193 /* TriggersAndActionsViewController.swift */; };
+		CC5367A519F0C8D500B636C6 /* Launch Screen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC5367A419F0C8D500B636C6 /* Launch Screen.xib */; };
+		CC78B07D197AC2A600A4A443 /* HRBrightnessCursor.m in Sources */ = {isa = PBXBuildFile; fileRef = CC78B06E197AC2A600A4A443 /* HRBrightnessCursor.m */; };
+		CC78B07E197AC2A600A4A443 /* HRBrightnessSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = CC78B070197AC2A600A4A443 /* HRBrightnessSlider.m */; };
+		CC78B07F197AC2A600A4A443 /* HRColorCursor.m in Sources */ = {isa = PBXBuildFile; fileRef = CC78B072197AC2A600A4A443 /* HRColorCursor.m */; };
+		CC78B080197AC2A600A4A443 /* HRColorInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = CC78B074197AC2A600A4A443 /* HRColorInfoView.m */; };
+		CC78B081197AC2A600A4A443 /* HRColorMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = CC78B076197AC2A600A4A443 /* HRColorMapView.m */; };
+		CC78B082197AC2A600A4A443 /* HRColorPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = CC78B078197AC2A600A4A443 /* HRColorPickerView.m */; };
+		CC78B083197AC2A600A4A443 /* HRHSVColorUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = CC78B07A197AC2A600A4A443 /* HRHSVColorUtil.m */; };
+		CC78B084197AC2A600A4A443 /* UIImage+CoreGraphics.m in Sources */ = {isa = PBXBuildFile; fileRef = CC78B07C197AC2A600A4A443 /* UIImage+CoreGraphics.m */; };
+		CC78B086197AC76900A4A443 /* ColorPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC78B085197AC76900A4A443 /* ColorPickerViewController.swift */; };
+		CC7A2D0B19CA92E000E89F0E /* HomesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7A2D0A19CA92E000E89F0E /* HomesViewController.swift */; };
+		CC970A8F1991E64400872018 /* UsersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC970A8E1991E64400872018 /* UsersViewController.swift */; };
+		CCA8C5B51992310A00D297CE /* ActionSetsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA8C5B41992310A00D297CE /* ActionSetsViewController.swift */; };
+		CCA8C5B71992354B00D297CE /* TriggersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA8C5B61992354B00D297CE /* TriggersViewController.swift */; };
+		CCA8C5B9199237E400D297CE /* ActionSetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA8C5B8199237E400D297CE /* ActionSetViewController.swift */; };
+		CCA8C5BC19923B9100D297CE /* Core.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA8C5BB19923B9100D297CE /* Core.swift */; };
+		CCA92310193FD1FB001BE28C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA9230F193FD1FB001BE28C /* AppDelegate.swift */; };
+		CCA92312193FD1FB001BE28C /* AccessoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA92311193FD1FB001BE28C /* AccessoryViewController.swift */; };
+		CCA92314193FD1FB001BE28C /* ServiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA92313193FD1FB001BE28C /* ServiceViewController.swift */; };
+		CCA92317193FD1FB001BE28C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCA92315193FD1FB001BE28C /* Main.storyboard */; };
+		CCA92319193FD1FB001BE28C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CCA92318193FD1FB001BE28C /* Images.xcassets */; };
+		CCA92325193FD1FB001BE28C /* BetterHomeKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA92324193FD1FB001BE28C /* BetterHomeKitTests.swift */; };
+		CCA92331193FD2E9001BE28C /* AddAccessoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA92330193FD2E9001BE28C /* AddAccessoriesViewController.swift */; };
+		CCA9233319402088001BE28C /* CharacteristicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA9233219402088001BE28C /* CharacteristicViewController.swift */; };
+		CCB4800C1992971000363818 /* TriggerDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB4800B1992971000363818 /* TriggerDetailViewController.swift */; };
+		CCBD291E19928D27009231C9 /* Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCBD291D19928D27009231C9 /* Cache.swift */; };
+		CCE569E9197AA6C0003468A2 /* RoomsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE569E8197AA6C0003468A2 /* RoomsViewController.swift */; };
+		E3C0622A1A48D05000CBFD2E /* HomeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3C062291A48D05000CBFD2E /* HomeKit.framework */; };
+		E3C0622E1A48E93400CBFD2E /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3C0622D1A48E93400CBFD2E /* CloudKit.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CC78B087197AC8E700A4A443 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CCA92302193FD1FB001BE28C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CCA92309193FD1FB001BE28C;
+			remoteInfo = HomeKitDemo;
+		};
+		CCA9231F193FD1FB001BE28C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CCA92302193FD1FB001BE28C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CCA92309193FD1FB001BE28C;
+			remoteInfo = BetterHomeKit;
+		};
+		CCF6B5BD196ED36300E6109D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CCA92302193FD1FB001BE28C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CCA92309193FD1FB001BE28C;
+			remoteInfo = HomeKitDemo;
+		};
+		CCF6B5BF196ED36300E6109D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CCA92302193FD1FB001BE28C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CCA92309193FD1FB001BE28C;
+			remoteInfo = HomeKitDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		B0E8B5201A04C0F000DEF6E3 /* ZonesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZonesViewController.swift; sourceTree = "<group>"; };
+		CC130807197DEFDD0049EA96 /* HomeKitDefines.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeKitDefines.swift; sourceTree = "<group>"; };
+		CC1BE949198CB008008E9193 /* TriggerCreateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TriggerCreateViewController.swift; sourceTree = "<group>"; };
+		CC1BE94B198CBEF0008E9193 /* TriggersAndActionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TriggersAndActionsViewController.swift; sourceTree = "<group>"; };
+		CC5367A419F0C8D500B636C6 /* Launch Screen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "Launch Screen.xib"; sourceTree = "<group>"; };
+		CC78B06D197AC2A600A4A443 /* HRBrightnessCursor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HRBrightnessCursor.h; sourceTree = "<group>"; };
+		CC78B06E197AC2A600A4A443 /* HRBrightnessCursor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HRBrightnessCursor.m; sourceTree = "<group>"; };
+		CC78B06F197AC2A600A4A443 /* HRBrightnessSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HRBrightnessSlider.h; sourceTree = "<group>"; };
+		CC78B070197AC2A600A4A443 /* HRBrightnessSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HRBrightnessSlider.m; sourceTree = "<group>"; };
+		CC78B071197AC2A600A4A443 /* HRColorCursor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HRColorCursor.h; sourceTree = "<group>"; };
+		CC78B072197AC2A600A4A443 /* HRColorCursor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HRColorCursor.m; sourceTree = "<group>"; };
+		CC78B073197AC2A600A4A443 /* HRColorInfoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HRColorInfoView.h; sourceTree = "<group>"; };
+		CC78B074197AC2A600A4A443 /* HRColorInfoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HRColorInfoView.m; sourceTree = "<group>"; };
+		CC78B075197AC2A600A4A443 /* HRColorMapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HRColorMapView.h; sourceTree = "<group>"; };
+		CC78B076197AC2A600A4A443 /* HRColorMapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HRColorMapView.m; sourceTree = "<group>"; };
+		CC78B077197AC2A600A4A443 /* HRColorPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HRColorPickerView.h; sourceTree = "<group>"; };
+		CC78B078197AC2A600A4A443 /* HRColorPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HRColorPickerView.m; sourceTree = "<group>"; };
+		CC78B079197AC2A600A4A443 /* HRHSVColorUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HRHSVColorUtil.h; sourceTree = "<group>"; };
+		CC78B07A197AC2A600A4A443 /* HRHSVColorUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HRHSVColorUtil.m; sourceTree = "<group>"; };
+		CC78B07B197AC2A600A4A443 /* UIImage+CoreGraphics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+CoreGraphics.h"; sourceTree = "<group>"; };
+		CC78B07C197AC2A600A4A443 /* UIImage+CoreGraphics.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+CoreGraphics.m"; sourceTree = "<group>"; };
+		CC78B085197AC76900A4A443 /* ColorPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorPickerViewController.swift; sourceTree = "<group>"; };
+		CC7A2D0A19CA92E000E89F0E /* HomesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomesViewController.swift; sourceTree = "<group>"; };
+		CC970A8E1991E64400872018 /* UsersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsersViewController.swift; sourceTree = "<group>"; };
+		CCA254A119934F7700E1D087 /* HomeKit_Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeKit_Private.h; sourceTree = "<group>"; };
+		CCA8C20B197AC97D00553D5B /* HomeKitDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HomeKitDemo-Bridging-Header.h"; sourceTree = "<group>"; };
+		CCA8C5B41992310A00D297CE /* ActionSetsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionSetsViewController.swift; sourceTree = "<group>"; };
+		CCA8C5B61992354B00D297CE /* TriggersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TriggersViewController.swift; sourceTree = "<group>"; };
+		CCA8C5B8199237E400D297CE /* ActionSetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionSetViewController.swift; sourceTree = "<group>"; };
+		CCA8C5BB19923B9100D297CE /* Core.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Core.swift; sourceTree = "<group>"; };
+		CCA9230A193FD1FB001BE28C /* HomeKitDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HomeKitDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CCA9230E193FD1FB001BE28C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CCA9230F193FD1FB001BE28C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CCA92311193FD1FB001BE28C /* AccessoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessoryViewController.swift; sourceTree = "<group>"; };
+		CCA92313193FD1FB001BE28C /* ServiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceViewController.swift; sourceTree = "<group>"; };
+		CCA92316193FD1FB001BE28C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CCA92318193FD1FB001BE28C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		CCA9231E193FD1FB001BE28C /* BetterHomeKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BetterHomeKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CCA92323193FD1FB001BE28C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CCA92324193FD1FB001BE28C /* BetterHomeKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BetterHomeKitTests.swift; sourceTree = "<group>"; };
+		CCA92330193FD2E9001BE28C /* AddAccessoriesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddAccessoriesViewController.swift; sourceTree = "<group>"; };
+		CCA9233219402088001BE28C /* CharacteristicViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacteristicViewController.swift; sourceTree = "<group>"; };
+		CCB4800B1992971000363818 /* TriggerDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TriggerDetailViewController.swift; sourceTree = "<group>"; };
+		CCBD291D19928D27009231C9 /* Cache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cache.swift; sourceTree = "<group>"; };
+		CCE569E8197AA6C0003468A2 /* RoomsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomsViewController.swift; sourceTree = "<group>"; };
+		CCF6B5BC196ED2AB00E6109D /* BetterHomeKit.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = BetterHomeKit.entitlements; sourceTree = "<group>"; };
+		E3C062291A48D05000CBFD2E /* HomeKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HomeKit.framework; path = System/Library/Frameworks/HomeKit.framework; sourceTree = SDKROOT; };
+		E3C0622D1A48E93400CBFD2E /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CCA92307193FD1FB001BE28C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E3C0622A1A48D05000CBFD2E /* HomeKit.framework in Frameworks */,
+				E3C0622E1A48E93400CBFD2E /* CloudKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CCA9231B193FD1FB001BE28C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CC78B06C197AC2A600A4A443 /* ColorPicker */ = {
+			isa = PBXGroup;
+			children = (
+				CC78B06D197AC2A600A4A443 /* HRBrightnessCursor.h */,
+				CC78B06E197AC2A600A4A443 /* HRBrightnessCursor.m */,
+				CC78B06F197AC2A600A4A443 /* HRBrightnessSlider.h */,
+				CC78B070197AC2A600A4A443 /* HRBrightnessSlider.m */,
+				CC78B071197AC2A600A4A443 /* HRColorCursor.h */,
+				CC78B072197AC2A600A4A443 /* HRColorCursor.m */,
+				CC78B073197AC2A600A4A443 /* HRColorInfoView.h */,
+				CC78B074197AC2A600A4A443 /* HRColorInfoView.m */,
+				CC78B075197AC2A600A4A443 /* HRColorMapView.h */,
+				CC78B076197AC2A600A4A443 /* HRColorMapView.m */,
+				CC78B077197AC2A600A4A443 /* HRColorPickerView.h */,
+				CC78B078197AC2A600A4A443 /* HRColorPickerView.m */,
+				CC78B079197AC2A600A4A443 /* HRHSVColorUtil.h */,
+				CC78B07A197AC2A600A4A443 /* HRHSVColorUtil.m */,
+				CC78B07B197AC2A600A4A443 /* UIImage+CoreGraphics.h */,
+				CC78B07C197AC2A600A4A443 /* UIImage+CoreGraphics.m */,
+			);
+			path = ColorPicker;
+			sourceTree = "<group>";
+		};
+		CCA92301193FD1FB001BE28C = {
+			isa = PBXGroup;
+			children = (
+				E3C0622D1A48E93400CBFD2E /* CloudKit.framework */,
+				E3C062291A48D05000CBFD2E /* HomeKit.framework */,
+				CCA9230C193FD1FB001BE28C /* BetterHomeKit */,
+				CCA92321193FD1FB001BE28C /* BetterHomeKitTests */,
+				CCA9230B193FD1FB001BE28C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CCA9230B193FD1FB001BE28C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CCA9230A193FD1FB001BE28C /* HomeKitDemo.app */,
+				CCA9231E193FD1FB001BE28C /* BetterHomeKitTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CCA9230C193FD1FB001BE28C /* BetterHomeKit */ = {
+			isa = PBXGroup;
+			children = (
+				CC78B06C197AC2A600A4A443 /* ColorPicker */,
+				CCF6B5BC196ED2AB00E6109D /* BetterHomeKit.entitlements */,
+				CCA254A119934F7700E1D087 /* HomeKit_Private.h */,
+				CC130807197DEFDD0049EA96 /* HomeKitDefines.swift */,
+				CCA9230F193FD1FB001BE28C /* AppDelegate.swift */,
+				CCA8C5BB19923B9100D297CE /* Core.swift */,
+				CCBD291D19928D27009231C9 /* Cache.swift */,
+				CCA92311193FD1FB001BE28C /* AccessoryViewController.swift */,
+				CCA92313193FD1FB001BE28C /* ServiceViewController.swift */,
+				CCA9233219402088001BE28C /* CharacteristicViewController.swift */,
+				CC78B085197AC76900A4A443 /* ColorPickerViewController.swift */,
+				CCA92330193FD2E9001BE28C /* AddAccessoriesViewController.swift */,
+				CCE569E8197AA6C0003468A2 /* RoomsViewController.swift */,
+				B0E8B5201A04C0F000DEF6E3 /* ZonesViewController.swift */,
+				CC7A2D0A19CA92E000E89F0E /* HomesViewController.swift */,
+				CC1BE949198CB008008E9193 /* TriggerCreateViewController.swift */,
+				CC970A8E1991E64400872018 /* UsersViewController.swift */,
+				CC1BE94B198CBEF0008E9193 /* TriggersAndActionsViewController.swift */,
+				CCA8C5B41992310A00D297CE /* ActionSetsViewController.swift */,
+				CCA8C5B61992354B00D297CE /* TriggersViewController.swift */,
+				CCA8C5B8199237E400D297CE /* ActionSetViewController.swift */,
+				CCB4800B1992971000363818 /* TriggerDetailViewController.swift */,
+				CCA92315193FD1FB001BE28C /* Main.storyboard */,
+				CC5367A419F0C8D500B636C6 /* Launch Screen.xib */,
+				CCA92318193FD1FB001BE28C /* Images.xcassets */,
+				CCA9230D193FD1FB001BE28C /* Supporting Files */,
+			);
+			path = BetterHomeKit;
+			sourceTree = "<group>";
+		};
+		CCA9230D193FD1FB001BE28C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CCA8C20B197AC97D00553D5B /* HomeKitDemo-Bridging-Header.h */,
+				CCA9230E193FD1FB001BE28C /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CCA92321193FD1FB001BE28C /* BetterHomeKitTests */ = {
+			isa = PBXGroup;
+			children = (
+				CCA92324193FD1FB001BE28C /* BetterHomeKitTests.swift */,
+				CCA92322193FD1FB001BE28C /* Supporting Files */,
+			);
+			path = BetterHomeKitTests;
+			sourceTree = "<group>";
+		};
+		CCA92322193FD1FB001BE28C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CCA92323193FD1FB001BE28C /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CCA92309193FD1FB001BE28C /* HomeKitDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CCA92328193FD1FB001BE28C /* Build configuration list for PBXNativeTarget "HomeKitDemo" */;
+			buildPhases = (
+				CCA92306193FD1FB001BE28C /* Sources */,
+				CCA92307193FD1FB001BE28C /* Frameworks */,
+				CCA92308193FD1FB001BE28C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HomeKitDemo;
+			productName = BetterHomeKit;
+			productReference = CCA9230A193FD1FB001BE28C /* HomeKitDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CCA9231D193FD1FB001BE28C /* BetterHomeKitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CCA9232B193FD1FB001BE28C /* Build configuration list for PBXNativeTarget "BetterHomeKitTests" */;
+			buildPhases = (
+				CCA9231A193FD1FB001BE28C /* Sources */,
+				CCA9231B193FD1FB001BE28C /* Frameworks */,
+				CCA9231C193FD1FB001BE28C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CCA92320193FD1FB001BE28C /* PBXTargetDependency */,
+				CCF6B5BE196ED36300E6109D /* PBXTargetDependency */,
+				CCF6B5C0196ED36300E6109D /* PBXTargetDependency */,
+				CC78B088197AC8E700A4A443 /* PBXTargetDependency */,
+			);
+			name = BetterHomeKitTests;
+			productName = BetterHomeKitTests;
+			productReference = CCA9231E193FD1FB001BE28C /* BetterHomeKitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CCA92302193FD1FB001BE28C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+				ORGANIZATIONNAME = Nlr;
+				TargetAttributes = {
+					CCA92309193FD1FB001BE28C = {
+						CreatedOnToolsVersion = 6.0;
+						DevelopmentTeam = 5HMJW6N276;
+						SystemCapabilities = {
+							com.apple.HomeKit = {
+								enabled = 1;
+							};
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
+					};
+					CCA9231D193FD1FB001BE28C = {
+						CreatedOnToolsVersion = 6.0;
+						TestTargetID = CCA92309193FD1FB001BE28C;
+					};
+				};
+			};
+			buildConfigurationList = CCA92305193FD1FB001BE28C /* Build configuration list for PBXProject "BetterHomeKit" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CCA92301193FD1FB001BE28C;
+			productRefGroup = CCA9230B193FD1FB001BE28C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CCA92309193FD1FB001BE28C /* HomeKitDemo */,
+				CCA9231D193FD1FB001BE28C /* BetterHomeKitTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CCA92308193FD1FB001BE28C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CCA92317193FD1FB001BE28C /* Main.storyboard in Resources */,
+				CCA92319193FD1FB001BE28C /* Images.xcassets in Resources */,
+				CC5367A519F0C8D500B636C6 /* Launch Screen.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CCA9231C193FD1FB001BE28C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CCA92306193FD1FB001BE28C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CCA8C5BC19923B9100D297CE /* Core.swift in Sources */,
+				CCA92314193FD1FB001BE28C /* ServiceViewController.swift in Sources */,
+				CCBD291E19928D27009231C9 /* Cache.swift in Sources */,
+				CC1BE94A198CB008008E9193 /* TriggerCreateViewController.swift in Sources */,
+				CCA92331193FD2E9001BE28C /* AddAccessoriesViewController.swift in Sources */,
+				CC1BE94C198CBEF0008E9193 /* TriggersAndActionsViewController.swift in Sources */,
+				CCB4800C1992971000363818 /* TriggerDetailViewController.swift in Sources */,
+				CC7A2D0B19CA92E000E89F0E /* HomesViewController.swift in Sources */,
+				CC78B080197AC2A600A4A443 /* HRColorInfoView.m in Sources */,
+				CCA8C5B51992310A00D297CE /* ActionSetsViewController.swift in Sources */,
+				CCE569E9197AA6C0003468A2 /* RoomsViewController.swift in Sources */,
+				CCA8C5B9199237E400D297CE /* ActionSetViewController.swift in Sources */,
+				CC78B082197AC2A600A4A443 /* HRColorPickerView.m in Sources */,
+				CC78B086197AC76900A4A443 /* ColorPickerViewController.swift in Sources */,
+				CCA92312193FD1FB001BE28C /* AccessoryViewController.swift in Sources */,
+				CCA92310193FD1FB001BE28C /* AppDelegate.swift in Sources */,
+				CCA8C5B71992354B00D297CE /* TriggersViewController.swift in Sources */,
+				CC78B081197AC2A600A4A443 /* HRColorMapView.m in Sources */,
+				CC78B07F197AC2A600A4A443 /* HRColorCursor.m in Sources */,
+				CC78B084197AC2A600A4A443 /* UIImage+CoreGraphics.m in Sources */,
+				CC78B07E197AC2A600A4A443 /* HRBrightnessSlider.m in Sources */,
+				CC78B083197AC2A600A4A443 /* HRHSVColorUtil.m in Sources */,
+				CCA9233319402088001BE28C /* CharacteristicViewController.swift in Sources */,
+				CC130808197DEFDD0049EA96 /* HomeKitDefines.swift in Sources */,
+				CC78B07D197AC2A600A4A443 /* HRBrightnessCursor.m in Sources */,
+				CC970A8F1991E64400872018 /* UsersViewController.swift in Sources */,
+				B0E8B5211A04C0F000DEF6E3 /* ZonesViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CCA9231A193FD1FB001BE28C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CCA92325193FD1FB001BE28C /* BetterHomeKitTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CC78B088197AC8E700A4A443 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CCA92309193FD1FB001BE28C /* HomeKitDemo */;
+			targetProxy = CC78B087197AC8E700A4A443 /* PBXContainerItemProxy */;
+		};
+		CCA92320193FD1FB001BE28C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CCA92309193FD1FB001BE28C /* HomeKitDemo */;
+			targetProxy = CCA9231F193FD1FB001BE28C /* PBXContainerItemProxy */;
+		};
+		CCF6B5BE196ED36300E6109D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CCA92309193FD1FB001BE28C /* HomeKitDemo */;
+			targetProxy = CCF6B5BD196ED36300E6109D /* PBXContainerItemProxy */;
+		};
+		CCF6B5C0196ED36300E6109D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CCA92309193FD1FB001BE28C /* HomeKitDemo */;
+			targetProxy = CCF6B5BF196ED36300E6109D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CCA92315193FD1FB001BE28C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CCA92316193FD1FB001BE28C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CCA92326193FD1FB001BE28C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				METAL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CCA92327193FD1FB001BE28C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				METAL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CCA92329193FD1FB001BE28C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = BetterHomeKit/BetterHomeKit.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEFINES_MODULE = NO;
+				INFOPLIST_FILE = BetterHomeKit/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "BetterHomeKit/HomeKitDemo-Bridging-Header.h";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CCA9232A193FD1FB001BE28C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = BetterHomeKit/BetterHomeKit.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEFINES_MODULE = NO;
+				INFOPLIST_FILE = BetterHomeKit/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "BetterHomeKit/HomeKitDemo-Bridging-Header.h";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		CCA9232C193FD1FB001BE28C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/HomeKitDemo.app/HomeKitDemo";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = BetterHomeKitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				METAL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+			};
+			name = Debug;
+		};
+		CCA9232D193FD1FB001BE28C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/HomeKitDemo.app/HomeKitDemo";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = BetterHomeKitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				METAL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CCA92305193FD1FB001BE28C /* Build configuration list for PBXProject "BetterHomeKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CCA92326193FD1FB001BE28C /* Debug */,
+				CCA92327193FD1FB001BE28C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CCA92328193FD1FB001BE28C /* Build configuration list for PBXNativeTarget "HomeKitDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CCA92329193FD1FB001BE28C /* Debug */,
+				CCA9232A193FD1FB001BE28C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CCA9232B193FD1FB001BE28C /* Build configuration list for PBXNativeTarget "BetterHomeKitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CCA9232C193FD1FB001BE28C /* Debug */,
+				CCA9232D193FD1FB001BE28C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CCA92302193FD1FB001BE28C /* Project object */;
+}

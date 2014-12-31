@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>16AF2413-560E-4CF7-B293-CF18BE2D5BD4</string>
+	<key>IDESourceControlProjectName</key>
+	<string>HomeWatch</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>E96350F6F60DFEA27E5BA572D4FABF146EAA5713</key>
+		<string>https://github.com/arctouch-ecilteodoro/HomeWatch.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>HomeWatch.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>E96350F6F60DFEA27E5BA572D4FABF146EAA5713</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/arctouch-ecilteodoro/HomeWatch.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>E96350F6F60DFEA27E5BA572D4FABF146EAA5713</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>E96350F6F60DFEA27E5BA572D4FABF146EAA5713</string>
+			<key>IDESourceControlWCCName</key>
+			<string>HomeWatch-Tower</string>
+		</dict>
+	</array>
+</dict>
+</plist>
