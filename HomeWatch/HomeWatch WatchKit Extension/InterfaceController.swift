@@ -11,9 +11,9 @@ import Foundation
 
 class InterfaceController: WKInterfaceController {
 	
-	var lamp1 = Lamp(id: 1, state: false),
-	    lamp2 = Lamp(id: 2, state: false),
-        lamp3 = Lamp(id: 3, state: false);
+	var lamp1 = Lamp(id: 1, state: false)
+	var lamp2 = Lamp(id: 2, state: false)
+    var lamp3 = Lamp(id: 3, state: false)
 	
 	let lampController = LampController()
 
@@ -25,7 +25,6 @@ class InterfaceController: WKInterfaceController {
         super.awakeWithContext(context)
         
         // Configure interface objects here.
-		
 		self.updateLampStates();
     }
 
