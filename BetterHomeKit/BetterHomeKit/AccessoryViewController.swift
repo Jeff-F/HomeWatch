@@ -103,8 +103,8 @@ class AccessoryViewController: UIViewController, UITableViewDataSource, UITableV
         if segue.identifier == "presentHomes" {
             let naviController = segue.destinationViewController as UINavigationController
             if let naviController = (segue.destinationViewController as? UINavigationController) {
-                let homeVC = naviController.viewControllers?[0] as HomesViewController
-                homeVC.homeManager = self.homeManager
+                //let homeVC = naviController.viewControllers?[0] as HomesViewController
+                HomeKitService.sharedInstance.homeManager = self.homeManager
             }
         }
         

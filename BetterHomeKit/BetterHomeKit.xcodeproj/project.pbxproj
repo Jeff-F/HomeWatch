@@ -49,6 +49,7 @@
 		E3D285CD1A5B37A100258E23 /* HomeKitDemo WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = E3D285B21A5B37A100258E23 /* HomeKitDemo WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		E3D285DE1A5B39EC00258E23 /* Lamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D285DA1A5B39EC00258E23 /* Lamp.swift */; };
 		E3D285DF1A5B39EC00258E23 /* LampController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D285DB1A5B39EC00258E23 /* LampController.swift */; };
+		E3D285E21A5B45FE00258E23 /* HomeKitService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D285E11A5B45FE00258E23 /* HomeKitService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -172,6 +173,7 @@
 		E3D285D81A5B39EB00258E23 /* HomeKitDemo WatchKit App-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HomeKitDemo WatchKit App-Bridging-Header.h"; sourceTree = "<group>"; };
 		E3D285DA1A5B39EC00258E23 /* Lamp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lamp.swift; sourceTree = "<group>"; };
 		E3D285DB1A5B39EC00258E23 /* LampController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LampController.swift; sourceTree = "<group>"; };
+		E3D285E11A5B45FE00258E23 /* HomeKitService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeKitService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -255,6 +257,7 @@
 				CCF6B5BC196ED2AB00E6109D /* BetterHomeKit.entitlements */,
 				CCA254A119934F7700E1D087 /* HomeKit_Private.h */,
 				CC130807197DEFDD0049EA96 /* HomeKitDefines.swift */,
+				E3D285E11A5B45FE00258E23 /* HomeKitService.swift */,
 				CCA9230F193FD1FB001BE28C /* AppDelegate.swift */,
 				CCA8C5BB19923B9100D297CE /* Core.swift */,
 				CCBD291D19928D27009231C9 /* Cache.swift */,
@@ -543,6 +546,7 @@
 				CC78B07F197AC2A600A4A443 /* HRColorCursor.m in Sources */,
 				CC78B084197AC2A600A4A443 /* UIImage+CoreGraphics.m in Sources */,
 				CC78B07E197AC2A600A4A443 /* HRBrightnessSlider.m in Sources */,
+				E3D285E21A5B45FE00258E23 /* HomeKitService.swift in Sources */,
 				CC78B083197AC2A600A4A443 /* HRHSVColorUtil.m in Sources */,
 				CCA9233319402088001BE28C /* CharacteristicViewController.swift in Sources */,
 				CC130808197DEFDD0049EA96 /* HomeKitDefines.swift in Sources */,

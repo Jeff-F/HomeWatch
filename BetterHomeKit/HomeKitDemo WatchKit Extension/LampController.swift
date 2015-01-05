@@ -23,11 +23,16 @@ class LampController {
 			reply: {(replyInfo, error) -> () in
 				if ((error) != nil) {
 					println("Error trying to communicate with parent app - 1002")
+                    println(error)
+
 				} else {
 					if (replyInfo != nil) {
 						var reply = replyInfo as NSDictionary
 						var lampId = reply.valueForKey("device_id") as Int
 						var state = reply.valueForKey("device_state") as Bool
+                        var comments = reply.valueForKey("comments") as String
+
+                        println(comments)
 						if (lamp.getId() != lampId) {
 							println("Device ID does not match")
 						} else {
