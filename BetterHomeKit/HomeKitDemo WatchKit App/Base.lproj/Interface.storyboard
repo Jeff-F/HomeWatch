@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="6724" systemVersion="14B25" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="bzh-EL-jVb">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6711"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="3735"/>
+    </dependencies>
+    <scenes>
+        <!--Static Notification Interface Controller-->
+        <scene sceneID="AEw-b0-oYE">
+            <objects>
+                <notificationController id="YCC-NB-fut">
+                    <items>
+                        <label alignment="left" text="Alert Label" id="IdU-wH-bcW"/>
+                    </items>
+                    <notificationCategory key="notificationCategory" id="JfB-70-Muf"/>
+                    <connections>
+                        <outlet property="notificationAlertLabel" destination="IdU-wH-bcW" id="JKC-fr-R95"/>
+                        <segue destination="4sK-HA-Art" kind="relationship" relationship="dynamicNotificationInterface" id="kXh-Jw-8B1"/>
+                    </connections>
+                </notificationController>
+            </objects>
+            <point key="canvasLocation" x="220" y="643"/>
+        </scene>
+        <!--Notification Controller-->
+        <scene sceneID="ZPc-GJ-vnh">
+            <objects>
+                <controller id="4sK-HA-Art" customClass="NotificationController" customModule="HomeKitDemo_WatchKit_App" customModuleProvider="target"/>
+            </objects>
+            <point key="canvasLocation" x="468" y="643"/>
+        </scene>
+        <!--Interface Controller-->
+        <scene sceneID="8Z8-nI-Bbx">
+            <objects>
+                <controller id="bzh-EL-jVb" customClass="InterfaceController" customModule="HomeKitDemo_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <group width="1" alignment="left" id="mQ6-G9-jVJ">
+                            <items>
+                                <label alignment="center" verticalAlignment="center" text="Lamp 1" id="eQe-N2-pv5"/>
+                                <button width="32" height="32" alignment="center" backgroundImage="light-bulb-off" id="XX9-x1-PlH">
+                                    <connections>
+                                        <action selector="lamp1ButtonTapped" destination="bzh-EL-jVb" id="CQ1-9S-bzF"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                        <separator alignment="left" id="Xdf-nZ-fqd"/>
+                        <group width="1" alignment="left" id="6we-G3-2ya">
+                            <items>
+                                <label alignment="center" verticalAlignment="center" text="Lamp 2" id="Wgp-mC-Vq1"/>
+                                <button width="32" height="32" alignment="center" backgroundImage="light-bulb-off" id="LMp-YD-1yp">
+                                    <connections>
+                                        <action selector="lamp2ButtonTapped" destination="bzh-EL-jVb" id="mvI-Hi-djv"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                        <separator alignment="left" id="TGA-Vh-wWp"/>
+                        <group width="1" alignment="left" id="bd5-8N-Hr0">
+                            <items>
+                                <label alignment="center" verticalAlignment="center" text="Lamp 3" id="yMe-mD-Xcf"/>
+                                <button width="32" height="32" alignment="center" backgroundImage="light-bulb-off" id="eXF-nh-wtT">
+                                    <connections>
+                                        <action selector="lamp3ButtonTapped" destination="bzh-EL-jVb" id="oIz-SU-1dR"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="lamp1Button" destination="XX9-x1-PlH" id="cZv-Fl-tcz"/>
+                        <outlet property="lamp2Button" destination="LMp-YD-1yp" id="YZA-KL-fuT"/>
+                        <outlet property="lamp3Button" destination="eXF-nh-wtT" id="jxD-qB-dQO"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="220" y="345"/>
+        </scene>
+    </scenes>
+</document>

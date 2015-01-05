@@ -40,6 +40,15 @@
 		CCE569E9197AA6C0003468A2 /* RoomsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE569E8197AA6C0003468A2 /* RoomsViewController.swift */; };
 		E3C0622A1A48D05000CBFD2E /* HomeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3C062291A48D05000CBFD2E /* HomeKit.framework */; };
 		E3C0622E1A48E93400CBFD2E /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3C0622D1A48E93400CBFD2E /* CloudKit.framework */; };
+		E3D285B81A5B37A100258E23 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D285B71A5B37A100258E23 /* InterfaceController.swift */; };
+		E3D285BA1A5B37A100258E23 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D285B91A5B37A100258E23 /* NotificationController.swift */; };
+		E3D285BC1A5B37A100258E23 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3D285BB1A5B37A100258E23 /* Images.xcassets */; };
+		E3D285C01A5B37A100258E23 /* HomeKitDemo WatchKit App.app in Resources */ = {isa = PBXBuildFile; fileRef = E3D285BF1A5B37A100258E23 /* HomeKitDemo WatchKit App.app */; };
+		E3D285C81A5B37A100258E23 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3D285C61A5B37A100258E23 /* Interface.storyboard */; };
+		E3D285CA1A5B37A100258E23 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3D285C91A5B37A100258E23 /* Images.xcassets */; };
+		E3D285CD1A5B37A100258E23 /* HomeKitDemo WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = E3D285B21A5B37A100258E23 /* HomeKitDemo WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		E3D285DE1A5B39EC00258E23 /* Lamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D285DA1A5B39EC00258E23 /* Lamp.swift */; };
+		E3D285DF1A5B39EC00258E23 /* LampController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D285DB1A5B39EC00258E23 /* LampController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,7 +80,35 @@
 			remoteGlobalIDString = CCA92309193FD1FB001BE28C;
 			remoteInfo = HomeKitDemo;
 		};
+		E3D285C11A5B37A100258E23 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CCA92302193FD1FB001BE28C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E3D285BE1A5B37A100258E23;
+			remoteInfo = "HomeKitDemo WatchKit App";
+		};
+		E3D285CB1A5B37A100258E23 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CCA92302193FD1FB001BE28C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E3D285B11A5B37A100258E23;
+			remoteInfo = "HomeKitDemo WatchKit Extension";
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		E3D285D41A5B37A100258E23 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				E3D285CD1A5B37A100258E23 /* HomeKitDemo WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		B0E8B5201A04C0F000DEF6E3 /* ZonesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZonesViewController.swift; sourceTree = "<group>"; };
@@ -122,6 +159,19 @@
 		CCF6B5BC196ED2AB00E6109D /* BetterHomeKit.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = BetterHomeKit.entitlements; sourceTree = "<group>"; };
 		E3C062291A48D05000CBFD2E /* HomeKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HomeKit.framework; path = System/Library/Frameworks/HomeKit.framework; sourceTree = SDKROOT; };
 		E3C0622D1A48E93400CBFD2E /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		E3D285B21A5B37A100258E23 /* HomeKitDemo WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "HomeKitDemo WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E3D285B51A5B37A100258E23 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E3D285B61A5B37A100258E23 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		E3D285B71A5B37A100258E23 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		E3D285B91A5B37A100258E23 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		E3D285BB1A5B37A100258E23 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		E3D285BF1A5B37A100258E23 /* HomeKitDemo WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HomeKitDemo WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E3D285C51A5B37A100258E23 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E3D285C71A5B37A100258E23 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		E3D285C91A5B37A100258E23 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		E3D285D81A5B39EB00258E23 /* HomeKitDemo WatchKit App-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HomeKitDemo WatchKit App-Bridging-Header.h"; sourceTree = "<group>"; };
+		E3D285DA1A5B39EC00258E23 /* Lamp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lamp.swift; sourceTree = "<group>"; };
+		E3D285DB1A5B39EC00258E23 /* LampController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LampController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +185,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		CCA9231B193FD1FB001BE28C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E3D285AF1A5B37A100258E23 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -174,6 +231,8 @@
 				E3C062291A48D05000CBFD2E /* HomeKit.framework */,
 				CCA9230C193FD1FB001BE28C /* BetterHomeKit */,
 				CCA92321193FD1FB001BE28C /* BetterHomeKitTests */,
+				E3D285B31A5B37A100258E23 /* HomeKitDemo WatchKit Extension */,
+				E3D285C31A5B37A100258E23 /* HomeKitDemo WatchKit App */,
 				CCA9230B193FD1FB001BE28C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -183,6 +242,8 @@
 			children = (
 				CCA9230A193FD1FB001BE28C /* HomeKitDemo.app */,
 				CCA9231E193FD1FB001BE28C /* BetterHomeKitTests.xctest */,
+				E3D285B21A5B37A100258E23 /* HomeKitDemo WatchKit Extension.appex */,
+				E3D285BF1A5B37A100258E23 /* HomeKitDemo WatchKit App.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -246,6 +307,47 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		E3D285B31A5B37A100258E23 /* HomeKitDemo WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				E3D285DA1A5B39EC00258E23 /* Lamp.swift */,
+				E3D285DB1A5B39EC00258E23 /* LampController.swift */,
+				E3D285B71A5B37A100258E23 /* InterfaceController.swift */,
+				E3D285B91A5B37A100258E23 /* NotificationController.swift */,
+				E3D285BB1A5B37A100258E23 /* Images.xcassets */,
+				E3D285B41A5B37A100258E23 /* Supporting Files */,
+				E3D285D81A5B39EB00258E23 /* HomeKitDemo WatchKit App-Bridging-Header.h */,
+			);
+			path = "HomeKitDemo WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		E3D285B41A5B37A100258E23 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E3D285B51A5B37A100258E23 /* Info.plist */,
+				E3D285B61A5B37A100258E23 /* PushNotificationPayload.apns */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E3D285C31A5B37A100258E23 /* HomeKitDemo WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				E3D285C61A5B37A100258E23 /* Interface.storyboard */,
+				E3D285C91A5B37A100258E23 /* Images.xcassets */,
+				E3D285C41A5B37A100258E23 /* Supporting Files */,
+			);
+			path = "HomeKitDemo WatchKit App";
+			sourceTree = "<group>";
+		};
+		E3D285C41A5B37A100258E23 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E3D285C51A5B37A100258E23 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -256,10 +358,12 @@
 				CCA92306193FD1FB001BE28C /* Sources */,
 				CCA92307193FD1FB001BE28C /* Frameworks */,
 				CCA92308193FD1FB001BE28C /* Resources */,
+				E3D285D41A5B37A100258E23 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				E3D285CC1A5B37A100258E23 /* PBXTargetDependency */,
 			);
 			name = HomeKitDemo;
 			productName = BetterHomeKit;
@@ -287,6 +391,39 @@
 			productReference = CCA9231E193FD1FB001BE28C /* BetterHomeKitTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		E3D285B11A5B37A100258E23 /* HomeKitDemo WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E3D285D31A5B37A100258E23 /* Build configuration list for PBXNativeTarget "HomeKitDemo WatchKit Extension" */;
+			buildPhases = (
+				E3D285AE1A5B37A100258E23 /* Sources */,
+				E3D285AF1A5B37A100258E23 /* Frameworks */,
+				E3D285B01A5B37A100258E23 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E3D285C21A5B37A100258E23 /* PBXTargetDependency */,
+			);
+			name = "HomeKitDemo WatchKit Extension";
+			productName = "HomeKitDemo WatchKit Extension";
+			productReference = E3D285B21A5B37A100258E23 /* HomeKitDemo WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit-extension";
+		};
+		E3D285BE1A5B37A100258E23 /* HomeKitDemo WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E3D285D21A5B37A100258E23 /* Build configuration list for PBXNativeTarget "HomeKitDemo WatchKit App" */;
+			buildPhases = (
+				E3D285BD1A5B37A100258E23 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "HomeKitDemo WatchKit App";
+			productName = "HomeKitDemo WatchKit App";
+			productReference = E3D285BF1A5B37A100258E23 /* HomeKitDemo WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -312,6 +449,13 @@
 						CreatedOnToolsVersion = 6.0;
 						TestTargetID = CCA92309193FD1FB001BE28C;
 					};
+					E3D285B11A5B37A100258E23 = {
+						CreatedOnToolsVersion = 6.2;
+						DevelopmentTeam = 5HMJW6N276;
+					};
+					E3D285BE1A5B37A100258E23 = {
+						CreatedOnToolsVersion = 6.2;
+					};
 				};
 			};
 			buildConfigurationList = CCA92305193FD1FB001BE28C /* Build configuration list for PBXProject "BetterHomeKit" */;
@@ -329,6 +473,8 @@
 			targets = (
 				CCA92309193FD1FB001BE28C /* HomeKitDemo */,
 				CCA9231D193FD1FB001BE28C /* BetterHomeKitTests */,
+				E3D285B11A5B37A100258E23 /* HomeKitDemo WatchKit Extension */,
+				E3D285BE1A5B37A100258E23 /* HomeKitDemo WatchKit App */,
 			);
 		};
 /* End PBXProject section */
@@ -348,6 +494,24 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E3D285B01A5B37A100258E23 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E3D285BC1A5B37A100258E23 /* Images.xcassets in Resources */,
+				E3D285C01A5B37A100258E23 /* HomeKitDemo WatchKit App.app in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E3D285BD1A5B37A100258E23 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E3D285C81A5B37A100258E23 /* Interface.storyboard in Resources */,
+				E3D285CA1A5B37A100258E23 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -396,6 +560,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E3D285AE1A5B37A100258E23 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E3D285DF1A5B39EC00258E23 /* LampController.swift in Sources */,
+				E3D285BA1A5B37A100258E23 /* NotificationController.swift in Sources */,
+				E3D285B81A5B37A100258E23 /* InterfaceController.swift in Sources */,
+				E3D285DE1A5B39EC00258E23 /* Lamp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -419,6 +594,16 @@
 			target = CCA92309193FD1FB001BE28C /* HomeKitDemo */;
 			targetProxy = CCF6B5BF196ED36300E6109D /* PBXContainerItemProxy */;
 		};
+		E3D285C21A5B37A100258E23 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E3D285BE1A5B37A100258E23 /* HomeKitDemo WatchKit App */;
+			targetProxy = E3D285C11A5B37A100258E23 /* PBXContainerItemProxy */;
+		};
+		E3D285CC1A5B37A100258E23 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E3D285B11A5B37A100258E23 /* HomeKitDemo WatchKit Extension */;
+			targetProxy = E3D285CB1A5B37A100258E23 /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
@@ -428,6 +613,14 @@
 				CCA92316193FD1FB001BE28C /* Base */,
 			);
 			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		E3D285C61A5B37A100258E23 /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E3D285C71A5B37A100258E23 /* Base */,
+			);
+			name = Interface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -518,6 +711,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEFINES_MODULE = NO;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = BetterHomeKit/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -536,6 +730,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEFINES_MODULE = NO;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = BetterHomeKit/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -582,6 +777,83 @@
 			};
 			name = Release;
 		};
+		E3D285CE1A5B37A100258E23 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "HomeKitDemo WatchKit Extension/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		E3D285CF1A5B37A100258E23 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				INFOPLIST_FILE = "HomeKitDemo WatchKit Extension/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		E3D285D01A5B37A100258E23 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				IBSC_MODULE = HomeKitDemo_WatchKit_Extension;
+				INFOPLIST_FILE = "HomeKitDemo WatchKit App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "HomeKitDemo WatchKit Extension/HomeKitDemo WatchKit App-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = 4;
+				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
+			};
+			name = Debug;
+		};
+		E3D285D11A5B37A100258E23 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
+				COPY_PHASE_STRIP = NO;
+				IBSC_MODULE = HomeKitDemo_WatchKit_Extension;
+				INFOPLIST_FILE = "HomeKitDemo WatchKit App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "HomeKitDemo WatchKit Extension/HomeKitDemo WatchKit App-Bridging-Header.h";
+				TARGETED_DEVICE_FAMILY = 4;
+				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -611,6 +883,22 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		E3D285D21A5B37A100258E23 /* Build configuration list for PBXNativeTarget "HomeKitDemo WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E3D285D01A5B37A100258E23 /* Debug */,
+				E3D285D11A5B37A100258E23 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		E3D285D31A5B37A100258E23 /* Build configuration list for PBXNativeTarget "HomeKitDemo WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E3D285CE1A5B37A100258E23 /* Debug */,
+				E3D285CF1A5B37A100258E23 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
