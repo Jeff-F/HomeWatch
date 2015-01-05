@@ -13,7 +13,11 @@ class LampController {
 	
 	func switchLampState(lamp : Lamp, updateLampStates : () -> ()) {
 		var userInfo = NSMutableDictionary()
-		userInfo.setValue("switch", forKey: "operation")
+		var operation = "on"
+		if (lamp.getState()) {
+			operation = "off"
+		}
+		userInfo.setValue(operation, forKey: "operation")
 		userInfo.setValue(lamp.getId(), forKey: "device_id")
 		if (WKInterfaceController.openParentApplication(userInfo,
 			reply: {(replyInfo, error) -> () in

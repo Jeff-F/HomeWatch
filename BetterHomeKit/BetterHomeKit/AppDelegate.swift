@@ -48,15 +48,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         var replyInfo = NSMutableDictionary()
         var operation = userDictionary.valueForKey("operation") as String
         var deviceId = userDictionary.valueForKey("device_id") as Int
-        if (operation == "switch") {
-            self.lampState[deviceId - 1] = !self.lampState[deviceId - 1]
-            replyInfo.setValue(deviceId, forKey: "device_id")
-            replyInfo.setValue(lampState[deviceId - 1], forKey: "device_state")
-        } else {
-            
+        if (operation == "on") {
+            self.lampState[deviceId - 1] = true
+		} else {
+            self.lampState[deviceId - 1] = false
         }
+		replyInfo.setValue(deviceId, forKey: "device_id")
+		replyInfo.setValue(lampState[deviceId - 1], forKey: "device_state")
         reply(replyInfo)
-    }
+    }	
     
 }
 
