@@ -23,7 +23,6 @@ class InterfaceController: WKInterfaceController {
 	
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
-        
         // Configure interface objects here.
 		self.updateLampStates();
     }
@@ -39,18 +38,15 @@ class InterfaceController: WKInterfaceController {
     }
 
 	@IBAction func lamp1ButtonTapped() {
-		lampController.switchLampState(lamp1)
-		updateLampStates()
+		lampController.switchLampState(lamp1, updateLampStates)
 	}
 	
 	@IBAction func lamp2ButtonTapped() {
-		lampController.switchLampState(lamp2)
-		updateLampStates()
+		lampController.switchLampState(lamp2, updateLampStates)
 	}
 	
 	@IBAction func lamp3ButtonTapped() {
-		lampController.switchLampState(lamp3)
-		updateLampStates()
+		lampController.switchLampState(lamp3, updateLampStates)
 	}
 	
 	private func updateLampStates() {

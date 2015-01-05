@@ -11,9 +11,8 @@ import WatchKit
 
 class LampController {
 	
-	func switchLampState(lamp : Lamp) {
-		lamp.switchState();
-		var userInfo = NSDictionary()
+	func switchLampState(lamp : Lamp, updateLampStates : () -> ()) {
+		var userInfo = NSMutableDictionary()
 		userInfo.setValue("switch", forKey: "operation")
 		userInfo.setValue(lamp.getId(), forKey: "device_id")
 		if (WKInterfaceController.openParentApplication(userInfo,
@@ -28,7 +27,10 @@ class LampController {
 						if (lamp.getId() != lampId) {
 							println("Device ID does not match")
 						} else {
-							return state
+							if (lamp.getState() != state) {
+								lamp.switchState()
+							}
+							updateLampStates()
 						}
 					}
 				}
@@ -39,7 +41,7 @@ class LampController {
 		}
 	}
 	
-	func getLampState(lamp : Lamp) -> Bool {
+	func getLampState(lamp : Lamp) {
 		lamp.getState()
 	}
 	

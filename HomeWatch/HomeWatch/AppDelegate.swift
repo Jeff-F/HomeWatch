@@ -13,7 +13,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 	var window: UIWindow?
 
-
+	//TODO: remove later
+	var lampState = [false, false, false]
+	
 	func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
 		// Override point for customization after application launch.
 		return true
@@ -41,6 +43,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		// Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 	}
 
+	func application(application: UIApplication!, handleWatchKitExtensionRequest userInfo: [NSObject : AnyObject]!, reply: (([NSObject : AnyObject]!) -> Void)!) {
+		let userDictionary = userInfo as NSDictionary
+		var replyInfo = NSMutableDictionary()
+		var operation = userDictionary.valueForKey("operation") as String
+		var deviceId = userDictionary.valueForKey("device_id") as Int
+		if (operation == "switch") {
+			self.lampState[deviceId - 1] = !self.lampState[deviceId - 1]
+			replyInfo.setValue(deviceId, forKey: "device_id")
+			replyInfo.setValue(lampState[deviceId - 1], forKey: "device_state")
+		} else {
+			
+		}
+		reply(replyInfo)
+	}
 
 }
 
