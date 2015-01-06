@@ -47,29 +47,57 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         println("HOLA MUNDO")
         let userDictionary = userInfo as NSDictionary
         var operation = userDictionary.valueForKey("operation") as String
+        
+        
         var deviceId = userDictionary.valueForKey("device_id") as Int
-		switch operation {
-		case "on" :
-			self.lampState[deviceId - 1] = true
-			HomeKitService.sharedInstance.onLamp(3, reply)
-		case "off" :
-			self.lampState[deviceId - 1] = false
-			HomeKitService.sharedInstance.offLamp(3, reply)
-		case "hue" :
-			var value = userDictionary.valueForKey("value") as Int
-			HomeKitService.sharedInstance.setHue(3, value: value, reply)
-		case "brightness" :
-			var value = userDictionary.valueForKey("value") as Int
-			HomeKitService.sharedInstance.setBrightness(3, value: value, reply)
-		case "saturation" :
-			var value = userDictionary.valueForKey("value") as Int
-			HomeKitService.sharedInstance.setSaturation(3, value: value, reply)
-		default :
-			return
-		}
+        
+        switch operation {
+        case "on" :
+            self.lampState[deviceId - 1] = true
+            HomeKitService.sharedInstance.onLamp(3, reply)
+        case "off" :
+            self.lampState[deviceId - 1] = false
+            HomeKitService.sharedInstance.offLamp(3, reply)
+        case "hue" :
+            var value = userDictionary.valueForKey("value") as Int
+            HomeKitService.sharedInstance.setHue(3, value: value, reply)
+        case "brightness" :
+            var value = userDictionary.valueForKey("value") as Int
+            HomeKitService.sharedInstance.setBrightness(3, value: value, reply)
+        case "saturation" :
+            var value = userDictionary.valueForKey("value") as Int
+            HomeKitService.sharedInstance.setSaturation(3, value: value, reply)
+        case "scene" :
+            var scene = userDictionary.valueForKey("value") as String
+            
+            switch scene {
+            case "deep-sea" :
+                self.deepSea(reply)
+            default :
+                println("Error: Unrecognized scene")
+            }
+        default:
+            println("Error: Unrecognized operation")
+        }
     }
     
     
+    func deepSea(printReply: (([NSObject : AnyObject]!) -> Void)!){
+        HomeKitService.sharedInstance.onLamp(1, printReply)
+        HomeKitService.sharedInstance.setBrightness(1, value: 225, reply: printReply)
+        HomeKitService.sharedInstance.setSaturation(1, value: 253, reply: printReply)
+        HomeKitService.sharedInstance.setHue(1, value: 47990, reply: printReply)
+        
+        HomeKitService.sharedInstance.onLamp(2, printReply)
+        HomeKitService.sharedInstance.setBrightness(2, value: 183, reply: printReply)
+        HomeKitService.sharedInstance.setSaturation(2, value: 253, reply: printReply)
+        HomeKitService.sharedInstance.setHue(2, value: 65527, reply: printReply)
+        
+        HomeKitService.sharedInstance.onLamp(3, printReply)
+        HomeKitService.sharedInstance.setBrightness(3, value: 207, reply: printReply)
+        HomeKitService.sharedInstance.setSaturation(3, value: 208, reply: printReply)
+        HomeKitService.sharedInstance.setHue(3, value: 13234, reply: printReply)
+    }
 }
 
 

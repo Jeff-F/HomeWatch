@@ -68,6 +68,7 @@ class LampController {
 	
 	func setCharacteristic(characteristic : String, forLamp lamp : Lamp, withValue value : Float) {
 		var userInfo = NSMutableDictionary()
+
 		userInfo.setValue(characteristic, forKey: "operation")
 		userInfo.setValue(lamp.getId(), forKey: "device_id")
 		userInfo.setValue(Int(value), forKey: "value")
@@ -91,5 +92,4 @@ class LampController {
 			println("Error trying to communicate with parent app - 1001")
 		}
 	}
-	
 }

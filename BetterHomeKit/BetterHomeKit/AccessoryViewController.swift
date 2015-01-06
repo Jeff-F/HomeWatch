@@ -105,13 +105,24 @@ class AccessoryViewController: UIViewController, UITableViewDataSource, UITableV
             }
         }
         
-        let lampId = 3
+        // Deep sea
         
-        HomeKitService.sharedInstance.onLamp(lampId, printReply)
-//        HomeKitService.sharedInstance.setBrightness(lampId, value: 150, reply: printReply)
-//        HomeKitService.sharedInstance.setSaturation(lampId, value: 151, reply: printReply)
-//        HomeKitService.sharedInstance.setHue(lampId, value: 152, reply: printReply)
-		
+        HomeKitService.sharedInstance.onLamp(1, printReply)
+        HomeKitService.sharedInstance.setBrightness(1, value: 225, reply: printReply)
+        HomeKitService.sharedInstance.setSaturation(1, value: 253, reply: printReply)
+        HomeKitService.sharedInstance.setHue(1, value: 47990, reply: printReply)
+        
+        HomeKitService.sharedInstance.onLamp(2, printReply)
+        HomeKitService.sharedInstance.setBrightness(2, value: 183, reply: printReply)
+        HomeKitService.sharedInstance.setSaturation(2, value: 253, reply: printReply)
+        HomeKitService.sharedInstance.setHue(2, value: 65527, reply: printReply)
+        
+        HomeKitService.sharedInstance.onLamp(3, printReply)
+        HomeKitService.sharedInstance.setBrightness(3, value: 207, reply: printReply)
+        HomeKitService.sharedInstance.setSaturation(3, value: 208, reply: printReply)
+        HomeKitService.sharedInstance.setHue(3, value: 13234, reply: printReply)
+        
+        
         if segue.identifier == "showDetail" {
             let indexPath = accessoriesTableView.indexPathForSelectedRow()
             if let indexPath = indexPath {

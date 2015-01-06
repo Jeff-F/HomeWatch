@@ -50,6 +50,8 @@
 		E3D285DE1A5B39EC00258E23 /* Lamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D285DA1A5B39EC00258E23 /* Lamp.swift */; };
 		E3D285DF1A5B39EC00258E23 /* LampController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D285DB1A5B39EC00258E23 /* LampController.swift */; };
 		E3D285E21A5B45FE00258E23 /* HomeKitService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D285E11A5B45FE00258E23 /* HomeKitService.swift */; };
+		E3E504041A5C954E00508A3C /* SceneInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3E504031A5C954E00508A3C /* SceneInterfaceController.swift */; };
+		E3E504061A5C988500508A3C /* MenuInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3E504051A5C988500508A3C /* MenuInterfaceController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -174,6 +176,8 @@
 		E3D285DA1A5B39EC00258E23 /* Lamp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lamp.swift; sourceTree = "<group>"; };
 		E3D285DB1A5B39EC00258E23 /* LampController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LampController.swift; sourceTree = "<group>"; };
 		E3D285E11A5B45FE00258E23 /* HomeKitService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeKitService.swift; sourceTree = "<group>"; };
+		E3E504031A5C954E00508A3C /* SceneInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneInterfaceController.swift; sourceTree = "<group>"; };
+		E3E504051A5C988500508A3C /* MenuInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuInterfaceController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -317,6 +321,8 @@
 				E3D285DB1A5B39EC00258E23 /* LampController.swift */,
 				E3D285B71A5B37A100258E23 /* InterfaceController.swift */,
 				E3D285B91A5B37A100258E23 /* NotificationController.swift */,
+				E3E504031A5C954E00508A3C /* SceneInterfaceController.swift */,
+				E3E504051A5C988500508A3C /* MenuInterfaceController.swift */,
 				E3D285BB1A5B37A100258E23 /* Images.xcassets */,
 				E3D285B41A5B37A100258E23 /* Supporting Files */,
 				E3D285D81A5B39EB00258E23 /* HomeKitDemo WatchKit App-Bridging-Header.h */,
@@ -572,6 +578,8 @@
 				E3D285BA1A5B37A100258E23 /* NotificationController.swift in Sources */,
 				E3D285B81A5B37A100258E23 /* InterfaceController.swift in Sources */,
 				E3D285DE1A5B39EC00258E23 /* Lamp.swift in Sources */,
+				E3E504061A5C988500508A3C /* MenuInterfaceController.swift in Sources */,
+				E3E504041A5C954E00508A3C /* SceneInterfaceController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -895,6 +903,7 @@
 				E3D285D11A5B37A100258E23 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E3D285D31A5B37A100258E23 /* Build configuration list for PBXNativeTarget "HomeKitDemo WatchKit Extension" */ = {
 			isa = XCConfigurationList;
@@ -903,6 +912,7 @@
 				E3D285CF1A5B37A100258E23 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
