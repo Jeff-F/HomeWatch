@@ -54,7 +54,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 			HomeKitService.sharedInstance.onLamp(3, reply)
 		case "off" :
 			self.lampState[deviceId - 1] = false
-			HomeKitService.sharedInstance.onLamp(3, reply)
+			HomeKitService.sharedInstance.offLamp(3, reply)
+		case "hue" :
+			var value = userDictionary.valueForKey("value") as Int
+			HomeKitService.sharedInstance.setHue(3, value: value, reply)
 		default :
 			return
 		}
