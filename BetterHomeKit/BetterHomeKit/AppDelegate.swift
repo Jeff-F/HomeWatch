@@ -46,22 +46,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication!, handleWatchKitExtensionRequest userInfo: [NSObject : AnyObject]!, reply: (([NSObject : AnyObject]!) -> Void)!) {
         println("HOLA MUNDO")
         let userDictionary = userInfo as NSDictionary
-        var replyInfo = NSMutableDictionary()
         var operation = userDictionary.valueForKey("operation") as String
         var deviceId = userDictionary.valueForKey("device_id") as Int
         if (operation == "on") {
             self.lampState[deviceId - 1] = true
-            HomeKitService.sharedInstance.onLamp(3)
+            HomeKitService.sharedInstance.onLamp(3, reply)
 		} else {
             self.lampState[deviceId - 1] = false
-            HomeKitService.sharedInstance.onLamp(3)
+            HomeKitService.sharedInstance.onLamp(3, reply)
         }
-		replyInfo.setValue(deviceId, forKey: "device_id")
-		replyInfo.setValue(lampState[deviceId - 1], forKey: "device_state")
-        replyInfo.setValue("Hola mundo", forKey: "comments")
-
-        reply(replyInfo)
-    }	
+    }
+    
     
 }
 

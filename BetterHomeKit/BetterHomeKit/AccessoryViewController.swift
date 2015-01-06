@@ -92,8 +92,19 @@ class AccessoryViewController: UIViewController, UITableViewDataSource, UITableV
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
+        func printReply(replyInfo: [NSObject : AnyObject]!) {
+            if (replyInfo != nil) {
+                var reply = replyInfo as NSDictionary
+                var lampId = reply.valueForKey("device_id") as Int
+                var state = reply.valueForKey("device_state") as Bool
+                var comments = reply.valueForKey("comments") as String
+                
+                println(comments)
+                
+            }
+        }
         
-        HomeKitService.sharedInstance.onLamp(3)
+        HomeKitService.sharedInstance.onLamp(3, printReply)
         
         if segue.identifier == "showDetail" {
             let indexPath = accessoriesTableView.indexPathForSelectedRow()

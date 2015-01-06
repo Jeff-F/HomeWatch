@@ -33,7 +33,7 @@ class LampController {
                         var comments = reply.valueForKey("comments") as String
 
                         println(comments)
-						if (lamp.getId() != lampId) {
+						if (lamp.getId() != 3) {
 							println("Device ID does not match")
 						} else {
 							if (lamp.getState() != state) {
@@ -42,8 +42,8 @@ class LampController {
 							updateLampStates()
 						}
 					}
-				}
-		})) {
+                }
+        })) {
 			println("Successful communication with parent app - 1000")
 		} else {
 			println("Error trying to communicate with parent app - 1001")
