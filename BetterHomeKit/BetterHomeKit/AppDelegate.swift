@@ -51,10 +51,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         var deviceId = userDictionary.valueForKey("device_id") as Int
         if (operation == "on") {
             self.lampState[deviceId - 1] = true
-            HomeKitService.sharedInstance.onLamp(deviceId - 1)
+            HomeKitService.sharedInstance.onLamp(3)
 		} else {
             self.lampState[deviceId - 1] = false
-            HomeKitService.sharedInstance.offLamp(deviceId - 1)
+            HomeKitService.sharedInstance.onLamp(3)
         }
 		replyInfo.setValue(deviceId, forKey: "device_id")
 		replyInfo.setValue(lampState[deviceId - 1], forKey: "device_state")

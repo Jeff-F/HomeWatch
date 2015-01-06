@@ -50,48 +50,48 @@ class HomeKitService: NSObject, HMAccessoryDelegate {
             }
         }
 
-        accessory = accessories[lampId]
+        let accessory = Core.sharedInstance.currentHome!.accessories[lampId] as HMAccessory
         
-        services.removeAll(keepCapacity: true)
-        if let accessory = accessory {
-            for service in accessory.services as [HMService] {
-                if !contains(services, service) {
-                    services.append(service)
-                }
-            }
-        }
-        
-        service = services[1]
-        
-        characteristics.removeAll(keepCapacity: true)
-        
-        // Update the user interface for the detail item.
-        for characteristic in service!.characteristics as [HMCharacteristic] {
-//            NSLog("CharDes: \(characteristic.characteristicTypeDescription())")
-//            if colorButton?.enabled == true {
-//                if characteristic.characteristicType == (HMCharacteristicTypeBrightness as String) {
-//                    brightnessCharacteristic = characteristic
-//                }
-//                
-//                if characteristic.characteristicType == (HMCharacteristicTypeHue as String) {
-//                    hueCharacteristic = characteristic
-//                }
-//                
-//                if characteristic.characteristicType == (HMCharacteristicTypeSaturation as String) {
-//                    saturationCharacteristic = characteristic
-//                }
-//                
-//                if characteristic.characteristicType == (HMCharacteristicTypePowerState as String) {
-//                    onCharacteristic = characteristic
+//        services.removeAll(keepCapacity: true)
+//        if let accessory = accessory {
+//            for service in accessory.services as [HMService] {
+//                if !contains(services, service) {
+//                    services.append(service)
 //                }
 //            }
-            
-            if !contains(characteristics, characteristic) {
-                characteristics.append(characteristic)
-            }
-        }
+//        }
+        
+        service = accessory.services[1] as? HMService
+        
+//        characteristics.removeAll(keepCapacity: true)
+//        
+//        // Update the user interface for the detail item.
+//        for characteristic in service!.characteristics as [HMCharacteristic] {
+////            NSLog("CharDes: \(characteristic.characteristicTypeDescription())")
+////            if colorButton?.enabled == true {
+////                if characteristic.characteristicType == (HMCharacteristicTypeBrightness as String) {
+////                    brightnessCharacteristic = characteristic
+////                }
+////                
+////                if characteristic.characteristicType == (HMCharacteristicTypeHue as String) {
+////                    hueCharacteristic = characteristic
+////                }
+////                
+////                if characteristic.characteristicType == (HMCharacteristicTypeSaturation as String) {
+////                    saturationCharacteristic = characteristic
+////                }
+////                
+////                if characteristic.characteristicType == (HMCharacteristicTypePowerState as String) {
+////                    onCharacteristic = characteristic
+////                }
+////            }
+//            
+//            if !contains(characteristics, characteristic) {
+//                characteristics.append(characteristic)
+//            }
+//        }
 
-        self.onCharacteristic(characteristics[0])
+        self.onCharacteristic(service!.characteristics[0] as HMCharacteristic)
         
         // let object = characteristics[indexPath.row] as HMCharacteristic
         
@@ -102,7 +102,7 @@ class HomeKitService: NSObject, HMAccessoryDelegate {
     }
     
     
-    func onCharacteristic(object : HMCharacteristic) -> Int {
+    func onCharacteristic(object : HMCharacteristic) {
         
         var result = 0
         
@@ -122,18 +122,13 @@ class HomeKitService: NSObject, HMAccessoryDelegate {
             if (object.value != nil) {
                 object.writeValue(!(object.value as Bool), completionHandler:
                     {
+                        
                         (error:NSError!) in
                         if (error != nil) {
                             NSLog("Change Char Error: \(error)")
                         } else {
                             result = object.value as Int
-//                            dispatch_async(dispatch_get_main_queue(),
-//                                {
-////                                    if let cell = tableView.cellForRowAtIndexPath(indexPath) {
-////                                        cell.textLabel?.text = "\(object.value)"
-////                                    }
-//                                }
-//                            )
+                            completionHandler(result)
                         }
                     }
                 )
@@ -141,8 +136,6 @@ class HomeKitService: NSObject, HMAccessoryDelegate {
         default:
             NSLog("Unsupported")
         }
-        
-        return result
     }
     
     

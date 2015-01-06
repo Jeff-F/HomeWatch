@@ -91,6 +91,10 @@ class AccessoryViewController: UIViewController, UITableViewDataSource, UITableV
     // #pragma mark - Segues
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        
+        HomeKitService.sharedInstance.onLamp(3)
+        
         if segue.identifier == "showDetail" {
             let indexPath = accessoriesTableView.indexPathForSelectedRow()
             if let indexPath = indexPath {
