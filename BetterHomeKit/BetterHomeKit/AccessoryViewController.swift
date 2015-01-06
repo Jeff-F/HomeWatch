@@ -108,9 +108,9 @@ class AccessoryViewController: UIViewController, UITableViewDataSource, UITableV
         let lampId = 2
         
         HomeKitService.sharedInstance.onLamp(lampId, printReply)
-        HomeKitService.sharedInstance.setBrightness(lampId, value: 250, reply: printReply)
-        HomeKitService.sharedInstance.setSaturation(lampId, value: 251, reply: printReply)
-        HomeKitService.sharedInstance.setHue(lampId, value: 252, reply: printReply)
+        HomeKitService.sharedInstance.setBrightness(lampId, value: 150, reply: printReply)
+        HomeKitService.sharedInstance.setSaturation(lampId, value: 151, reply: printReply)
+        HomeKitService.sharedInstance.setHue(lampId, value: 152, reply: printReply)
         
         if segue.identifier == "showDetail" {
             let indexPath = accessoriesTableView.indexPathForSelectedRow()

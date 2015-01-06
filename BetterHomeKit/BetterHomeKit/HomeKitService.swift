@@ -131,58 +131,83 @@ class HomeKitService: NSObject, HMAccessoryDelegate {
     
     func onLamp(lampId : Int, reply: (([NSObject : AnyObject]!) -> Void)!) {
         var characteristics = [HMCharacteristic]()
+        var powerCharacteristic:HMCharacteristic?
         
         characteristics = self.retrieveCharacteristics(lampId) as [HMCharacteristic]
         
-        var charDesc = characteristics[0].characteristicType
-        if let desc = HomeKitUUIDs[characteristics[0].characteristicType] {
-            charDesc = desc
+        for characteristic in characteristics as [HMCharacteristic] {
+            if characteristic.characteristicType == (HMCharacteristicTypePowerState as String) {
+                powerCharacteristic = characteristic
+            }
         }
-
-        self.setCharacteristicValue(lampId, object: characteristics[POWER_CHARACTERISTIC] as HMCharacteristic, value: 1, reply)
+        
+        self.setCharacteristicValue(lampId, object: powerCharacteristic!, value: 1, reply)
     }
     
     func offLamp(lampId : Int, reply: (([NSObject : AnyObject]!) -> Void)!) {
         var characteristics = [HMCharacteristic]()
+        var powerCharacteristic:HMCharacteristic?
         
         characteristics = self.retrieveCharacteristics(lampId) as [HMCharacteristic]
         
-        self.setCharacteristicValue(lampId, object: characteristics[POWER_CHARACTERISTIC] as HMCharacteristic, value: 0, reply)
+        for characteristic in characteristics as [HMCharacteristic] {
+            if characteristic.characteristicType == (HMCharacteristicTypePowerState as String) {
+                powerCharacteristic = characteristic
+            }
+        }
+        
+        self.setCharacteristicValue(lampId, object: powerCharacteristic!, value: 0, reply)
     }
 
     // MARK: Hue functions (0 - 65535)
     
     func setHue(lampId : Int, value : Int, reply: (([NSObject : AnyObject]!) -> Void)!) {
         var characteristics = [HMCharacteristic]()
-
-        characteristics = self.retrieveCharacteristics(lampId) as [HMCharacteristic]
-            
-     //  characteristics =     char as [HMCharacteristic]
+        var hueCharacteristic:HMCharacteristic?
         
-        // TODO Replace the value of value for a real value
-        self.setCharacteristicValue(lampId, object: characteristics[HUE_CHARACTERISTIC] as HMCharacteristic, value: value, reply)
+        characteristics = self.retrieveCharacteristics(lampId) as [HMCharacteristic]
+        
+        for characteristic in characteristics as [HMCharacteristic] {
+            if characteristic.characteristicType == (HMCharacteristicTypeHue as String) {
+                hueCharacteristic = characteristic
+            }
+        }
+        
+        self.setCharacteristicValue(lampId, object: hueCharacteristic!, value: value, reply)
     }
     
     // MARK: Saturation functions (0 - 254)
     
     func setSaturation(lampId : Int, value : Int, reply: (([NSObject : AnyObject]!) -> Void)!) {
         var characteristics = [HMCharacteristic]()
+        var saturationCharacteristic:HMCharacteristic?
         
         characteristics = self.retrieveCharacteristics(lampId) as [HMCharacteristic]
         
-        // TODO Replace the value of value for a real value
-        self.setCharacteristicValue(lampId, object: characteristics[SATURATION_CHARACTERISTIC] as HMCharacteristic, value: value, reply)
+        for characteristic in characteristics as [HMCharacteristic] {
+            if characteristic.characteristicType == (HMCharacteristicTypeSaturation as String) {
+                saturationCharacteristic = characteristic
+            }
+        }
+        
+        self.setCharacteristicValue(lampId, object: saturationCharacteristic!, value: value, reply)
     }
     
     // MARK: Brightness functions (0 - 254)
     
     func setBrightness(lampId : Int, value : Int, reply: (([NSObject : AnyObject]!) -> Void)!) {
         var characteristics = [HMCharacteristic]()
-        
+        var brightnessCharacteristic:HMCharacteristic?
+
         characteristics = self.retrieveCharacteristics(lampId) as [HMCharacteristic]
         
-        // TODO Replace the value of value for a real value
-        self.setCharacteristicValue(lampId, object: characteristics[BRIGHTNESS_CHARACTERISTIC] as HMCharacteristic, value: value, reply)
+        for characteristic in characteristics as [HMCharacteristic] {
+            if characteristic.characteristicType == (HMCharacteristicTypeBrightness as String) {
+                brightnessCharacteristic = characteristic
+            }
+        }
+
+        self.setCharacteristicValue(lampId, object: brightnessCharacteristic!, value: value, reply)
     }
 
     // MARK: HMAccessoryDelegate functions
