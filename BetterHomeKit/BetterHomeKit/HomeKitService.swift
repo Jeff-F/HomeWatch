@@ -42,7 +42,7 @@ class HomeKitService: NSObject, HMAccessoryDelegate {
     
     // MARK: Common use functions
     
-    func retrieveCharacteristics(lampId : Int) -> NSArray {
+    func retrieveCharacteristics(lampId : Int) -> [AnyObject]! {
     
     var hardwareLampId = 0
     switch (lampId) {
@@ -66,40 +66,40 @@ class HomeKitService: NSObject, HMAccessoryDelegate {
         return service!.characteristics
     }
     
-    func setCharacteristicValue(lampId : Int, object : HMCharacteristic, value : AnyObject, reply: (([NSObject : AnyObject]!) -> Void)!) {
+    func setCharacteristicValue(lampId : Int, object : HMCharacteristic, value : Int, reply: (([NSObject : AnyObject]!) -> Void)!) {
         
         var result = 0
         var replyInfo = NSMutableDictionary()
         
         switch (object.metadata.format as NSString) {
-        case HMCharacteristicMetadataFormatBool:
+//        case HMCharacteristicMetadataFormatBool:
+//            
+//            // TODO TRANSFORM Value to string
+//            object.writeValue(value, completionHandler:
+//                {
+//                    (error:NSError!) in
+//                    if (error != nil) {
+//                        NSLog("Change Char Error: \(error)")
+//                        replyInfo.setValue("Error", forKey: "error")
+//                        
+//                        reply(replyInfo)
+//                    } else {
+//                        result = object.value as Int
+//                        
+//                        replyInfo.setValue(lampId, forKey: "device_id")
+//                        replyInfo.setValue(result == 0 ? false : true, forKey: "result")
+//                        replyInfo.setValue("Hola mundo", forKey: "comments")
+//                        
+//                        reply(replyInfo)
+//                        
+//                    }
+//                }
+//            )
+        case HMCharacteristicMetadataFormatBool, HMCharacteristicMetadataFormatInt,HMCharacteristicMetadataFormatFloat,HMCharacteristicMetadataFormatUInt8,HMCharacteristicMetadataFormatUInt16,HMCharacteristicMetadataFormatUInt32,HMCharacteristicMetadataFormatUInt64:
+//            let f = NSNumberFormatter()
+//            f.numberStyle = NSNumberFormatterStyle.DecimalStyle
             
-            // TODO TRANSFORM Value to string
-            object.writeValue(!(object.value as Bool), completionHandler:
-                {
-                    (error:NSError!) in
-                    if (error != nil) {
-                        NSLog("Change Char Error: \(error)")
-                        replyInfo.setValue("Error", forKey: "error")
-                        
-                        reply(replyInfo)
-                    } else {
-                        result = object.value as Int
-                        
-                        replyInfo.setValue(lampId, forKey: "device_id")
-                        replyInfo.setValue(result == 0 ? false : true, forKey: "result")
-                        replyInfo.setValue("Hola mundo", forKey: "comments")
-                        
-                        reply(replyInfo)
-                        
-                    }
-                }
-            )
-        case HMCharacteristicMetadataFormatInt,HMCharacteristicMetadataFormatFloat,HMCharacteristicMetadataFormatUInt8,HMCharacteristicMetadataFormatUInt16,HMCharacteristicMetadataFormatUInt32,HMCharacteristicMetadataFormatUInt64:
-            let f = NSNumberFormatter()
-            f.numberStyle = NSNumberFormatterStyle.DecimalStyle
-            
-            object.writeValue(f.numberFromString(value as String), completionHandler:
+            object.writeValue(value, completionHandler:
                 {
                     (error:NSError!) in
                     if (error != nil) {
@@ -112,7 +112,7 @@ class HomeKitService: NSObject, HMAccessoryDelegate {
                         
                         replyInfo.setValue(lampId, forKey: "device_id")
                         replyInfo.setValue(result, forKey: "result")
-                        replyInfo.setValue("Hola mundo", forKey: "comments")
+                        replyInfo.setValue("Value written correctly", forKey: "comments")
                         
                         reply(replyInfo)
                         
@@ -129,31 +129,53 @@ class HomeKitService: NSObject, HMAccessoryDelegate {
     func onLamp(lampId : Int, reply: (([NSObject : AnyObject]!) -> Void)!) {
         var characteristics = [HMCharacteristic]()
         
-        characteristics = self.retrieveCharacteristics(lampId) as [HMCharacteristic];()
+        characteristics = self.retrieveCharacteristics(lampId) as [HMCharacteristic]
         
         var charDesc = characteristics[0].characteristicType
         if let desc = HomeKitUUIDs[characteristics[0].characteristicType] {
             charDesc = desc
         }
 
-        // TODO Replace the value of value for a real value
-        self.setCharacteristicValue(lampId, object: characteristics[POWER_CHARACTERISTIC] as HMCharacteristic, value: accessory as HMAccessory, reply)
+        self.setCharacteristicValue(lampId, object: characteristics[POWER_CHARACTERISTIC] as HMCharacteristic, value: 1, reply)
     }
     
     func offLamp(lampId : Int, reply: (([NSObject : AnyObject]!) -> Void)!) {
         println("OFF Lamp id: \(lampId)")
     }
 
-    // MARK: Brightness functions
+    // MARK: Hue functions (0 - 65535)
     
-    func setBrightness(lampId : Int, value : AnyObject, reply: (([NSObject : AnyObject]!) -> Void)!) {
+    func setHue(lampId : Int, value : Int, reply: (([NSObject : AnyObject]!) -> Void)!) {
         var characteristics = [HMCharacteristic]()
-        
-        characteristics = self.retrieveCharacteristics(lampId)
-        
+
+        characteristics = self.retrieveCharacteristics(lampId) as [HMCharacteristic]
+            
+     //  characteristics =     char as [HMCharacteristic]
         
         // TODO Replace the value of value for a real value
-        self.setCharacteristicValue(lampId, object: characteristics[BRIGHTNESS_CHARACTERISTIC] as HMCharacteristic, value: accessory as HMAccessory, reply)
+        self.setCharacteristicValue(lampId, object: characteristics[HUE_CHARACTERISTIC] as HMCharacteristic, value: value, reply)
+    }
+    
+    // MARK: Saturation functions (0 - 254)
+    
+    func setSaturation(lampId : Int, value : Int, reply: (([NSObject : AnyObject]!) -> Void)!) {
+        var characteristics = [HMCharacteristic]()
+        
+        characteristics = self.retrieveCharacteristics(lampId) as [HMCharacteristic]
+        
+        // TODO Replace the value of value for a real value
+        self.setCharacteristicValue(lampId, object: characteristics[SATURATION_CHARACTERISTIC] as HMCharacteristic, value: value, reply)
+    }
+    
+    // MARK: Brightness functions (0 - 254)
+    
+    func setBrightness(lampId : Int, value : Int, reply: (([NSObject : AnyObject]!) -> Void)!) {
+        var characteristics = [HMCharacteristic]()
+        
+        characteristics = self.retrieveCharacteristics(lampId) as [HMCharacteristic]
+        
+        // TODO Replace the value of value for a real value
+        self.setCharacteristicValue(lampId, object: characteristics[BRIGHTNESS_CHARACTERISTIC] as HMCharacteristic, value: value, reply)
     }
 
     // MARK: HMAccessoryDelegate functions
