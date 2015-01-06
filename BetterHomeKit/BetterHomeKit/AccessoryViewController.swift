@@ -96,15 +96,21 @@ class AccessoryViewController: UIViewController, UITableViewDataSource, UITableV
             if (replyInfo != nil) {
                 var reply = replyInfo as NSDictionary
                 var lampId = reply.valueForKey("device_id") as Int
-                var state = reply.valueForKey("device_state") as Bool
+                var result = reply.valueForKey("result") as Int
                 var comments = reply.valueForKey("comments") as String
                 
                 println(comments)
+                println("result : \(result)")
                 
             }
         }
         
-        HomeKitService.sharedInstance.onLamp(3, printReply)
+        let lampId = 2
+        
+        HomeKitService.sharedInstance.onLamp(lampId, printReply)
+        HomeKitService.sharedInstance.setBrightness(lampId, value: 150, reply: printReply)
+        HomeKitService.sharedInstance.setSaturation(lampId, value: 151, reply: printReply)
+        HomeKitService.sharedInstance.setHue(lampId, value: 152, reply: printReply)
         
         if segue.identifier == "showDetail" {
             let indexPath = accessoriesTableView.indexPathForSelectedRow()
