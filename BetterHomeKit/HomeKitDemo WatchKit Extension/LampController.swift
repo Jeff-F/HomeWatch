@@ -54,4 +54,43 @@ class LampController {
 		lamp.getState()
 	}
 	
+	func setHue(lamp : Lamp, value : Float) {
+		self.setCharacteristic("hue", forLamp: lamp, withValue: value)
+	}
+	
+	func setBrightness(lamp : Lamp, value : Float) {
+		self.setCharacteristic("brightness", forLamp: lamp, withValue: value)
+	}
+	
+	func setSaturation(lamp : Lamp, value : Float) {
+		self.setCharacteristic("saturation", forLamp: lamp, withValue: value)
+	}
+	
+	func setCharacteristic(characteristic : String, forLamp lamp : Lamp, withValue value : Float) {
+		var userInfo = NSMutableDictionary()
+		userInfo.setValue(characteristic, forKey: "operation")
+		userInfo.setValue(lamp.getId(), forKey: "device_id")
+		userInfo.setValue(Int(value), forKey: "value")
+		if (WKInterfaceController.openParentApplication(userInfo,
+			reply: {(replyInfo, error) -> () in
+				if ((error) != nil) {
+					println("Error trying to communicate with parent app - 1002")
+					println(error)
+					
+				} else {
+					if (replyInfo != nil) {
+						var reply = replyInfo as NSDictionary
+						var lampId = reply.valueForKey("device_id") as Int
+						var characteristic = reply.valueForKey("characteristic") as Bool
+						var value = reply.valueForKey("value") as String
+						println("Device \(lampId); characteristic: \(characteristic); value: \(value)")
+					}
+				}
+		})) {
+			println("Successful communication with parent app - 1000")
+		} else {
+			println("Error trying to communicate with parent app - 1001")
+		}
+	}
+	
 }

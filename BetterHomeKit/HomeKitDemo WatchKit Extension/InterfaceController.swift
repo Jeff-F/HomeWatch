@@ -49,6 +49,55 @@ class InterfaceController: WKInterfaceController {
 		lampController.switchLampState(lamp3, updateLampStates)
 	}
 	
+	@IBAction func lamp1ButtonTapped() {
+		lampController.switchLampState(lamp1, updateLampStates)
+	}
+	
+	@IBAction func lamp2ButtonTapped() {
+		lampController.switchLampState(lamp2, updateLampStates)
+	}
+	
+	@IBAction func lamp3ButtonTapped() {
+		lampController.switchLampState(lamp3, updateLampStates)
+	}
+	
+	@IBAction func setLamp1Hue(value: Float) {
+		lampController.setHue(lamp1, value)
+	}
+	
+	@IBAction func setLamp1Brightness(value: Float) {
+		lampController.setBrightness(lamp1, value)
+	}
+	
+	@IBAction func setLamp1Saturation(value: Float) {
+		lampController.setSaturation(lamp1,value)
+	}
+	
+	@IBAction func setLamp2Hue(value: Float) {
+		lampController.setHue(lamp2,value)
+	}
+	
+	@IBAction func setLamp2Brightness(value: Float) {
+		lampController.setHue(lamp2, value)
+	}
+	
+	@IBAction func setLamp2Saturation(value: Float) {
+		lampController.setSaturation(lamp2, value)
+	}
+	
+	@IBAction func setLamp3Hue(value: Float) {
+		lampController.setHue(lamp3, value)
+	}
+	
+	@IBAction func setLamp3Brightness(value: Float) {
+		lampController.setHue(lamp3, value)
+	}
+	
+	@IBAction func setLamp3Saturation(value: Float) {
+		lampController.setSaturation(lamp3, value)
+	}
+	
+
 	private func updateLampStates() {
 		lamp1Button.setBackgroundImageNamed(lamp1.getState() ? "light-bulb-on" : "light-bulb-off")
 		lamp2Button.setBackgroundImageNamed(lamp2.getState() ? "light-bulb-on" : "light-bulb-off")

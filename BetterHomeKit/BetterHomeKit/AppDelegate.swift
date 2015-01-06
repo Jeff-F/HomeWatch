@@ -48,13 +48,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let userDictionary = userInfo as NSDictionary
         var operation = userDictionary.valueForKey("operation") as String
         var deviceId = userDictionary.valueForKey("device_id") as Int
-        if (operation == "on") {
-            self.lampState[deviceId - 1] = true
-            HomeKitService.sharedInstance.onLamp(3, reply)
-		} else {
-            self.lampState[deviceId - 1] = false
-            HomeKitService.sharedInstance.onLamp(3, reply)
-        }
+		switch operation {
+		case "on" :
+			self.lampState[deviceId - 1] = true
+			HomeKitService.sharedInstance.onLamp(3, reply)
+		case "off" :
+			self.lampState[deviceId - 1] = false
+			HomeKitService.sharedInstance.onLamp(3, reply)
+		default :
+			return
+		}
     }
     
     

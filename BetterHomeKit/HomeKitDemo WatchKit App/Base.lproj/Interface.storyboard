@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="6724" systemVersion="14B25" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="bzh-EL-jVb">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="6724" systemVersion="14C81f" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="bzh-EL-jVb">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6711"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="3735"/>
@@ -33,14 +33,54 @@
             <objects>
                 <controller id="bzh-EL-jVb" customClass="InterfaceController" customModule="HomeKitDemo_WatchKit_App" customModuleProvider="target">
                     <items>
-                        <group width="1" alignment="left" id="mQ6-G9-jVJ">
+                        <group width="1" alignment="left" layout="vertical" id="fxR-Zn-DsH">
                             <items>
-                                <label alignment="center" verticalAlignment="center" text="Lamp 1" id="eQe-N2-pv5"/>
-                                <button width="32" height="32" alignment="center" backgroundImage="light-bulb-off" id="XX9-x1-PlH">
-                                    <connections>
-                                        <action selector="lamp1ButtonTapped" destination="bzh-EL-jVb" id="CQ1-9S-bzF"/>
-                                    </connections>
-                                </button>
+                                <group width="1" alignment="left" id="mQ6-G9-jVJ">
+                                    <items>
+                                        <label alignment="center" verticalAlignment="center" text="Lamp 1" id="eQe-N2-pv5"/>
+                                        <button width="32" height="32" alignment="center" backgroundImage="light-bulb-off" id="XX9-x1-PlH">
+                                            <connections>
+                                                <action selector="lamp1ButtonTapped" destination="bzh-EL-jVb" id="CQ1-9S-bzF"/>
+                                            </connections>
+                                        </button>
+                                    </items>
+                                </group>
+                                <group width="1" alignment="center" layout="vertical" id="CrM-Uk-1Lt">
+                                    <items>
+                                        <label alignment="left" verticalAlignment="center" text="Hue" id="9KP-0l-urc">
+                                            <fontDescription key="font" style="UICTFontTextStyleSubhead"/>
+                                        </label>
+                                        <slider width="1" alignment="right" verticalAlignment="center" maximum="65535" steps="1" id="0Hv-OB-w0A">
+                                            <connections>
+                                                <action selector="setLamp1Hue:" destination="bzh-EL-jVb" id="q7u-w3-bYy"/>
+                                            </connections>
+                                        </slider>
+                                    </items>
+                                </group>
+                                <group width="1" alignment="left" layout="vertical" id="4JU-Z7-OIW">
+                                    <items>
+                                        <label alignment="left" text="Brightness" id="qQZ-K5-fhH">
+                                            <fontDescription key="font" style="UICTFontTextStyleSubhead"/>
+                                        </label>
+                                        <slider width="1" alignment="left" maximum="254" steps="1" id="bbT-5b-aQH">
+                                            <connections>
+                                                <action selector="setLamp1Brightness:" destination="bzh-EL-jVb" id="USL-SS-xcB"/>
+                                            </connections>
+                                        </slider>
+                                    </items>
+                                </group>
+                                <group width="1" alignment="left" layout="vertical" id="E6C-2Q-GJc">
+                                    <items>
+                                        <label alignment="left" text="Saturation" id="AME-Jo-Em8">
+                                            <fontDescription key="font" style="UICTFontTextStyleSubhead"/>
+                                        </label>
+                                        <slider width="1" alignment="left" maximum="254" steps="1" id="Xm8-Qf-jaj">
+                                            <connections>
+                                                <action selector="setLamp1Saturation:" destination="bzh-EL-jVb" id="ugz-Bi-rFg"/>
+                                            </connections>
+                                        </slider>
+                                    </items>
+                                </group>
                             </items>
                         </group>
                         <separator alignment="left" id="Xdf-nZ-fqd"/>
@@ -54,6 +94,42 @@
                                 </button>
                             </items>
                         </group>
+                        <group width="1" alignment="center" layout="vertical" id="Ddl-E3-muT">
+                            <items>
+                                <label alignment="left" verticalAlignment="center" text="Hue" id="WdD-at-UuX">
+                                    <fontDescription key="font" style="UICTFontTextStyleSubhead"/>
+                                </label>
+                                <slider width="1" alignment="right" verticalAlignment="center" maximum="65535" steps="1" id="T1w-4s-DSR">
+                                    <connections>
+                                        <action selector="setLamp2Hue:" destination="bzh-EL-jVb" id="4el-UG-n73"/>
+                                    </connections>
+                                </slider>
+                            </items>
+                        </group>
+                        <group width="1" alignment="left" layout="vertical" id="ivg-JS-d8x">
+                            <items>
+                                <label alignment="left" text="Brightness" id="fXy-cP-jWC">
+                                    <fontDescription key="font" style="UICTFontTextStyleSubhead"/>
+                                </label>
+                                <slider width="1" alignment="left" maximum="254" steps="1" id="oG6-Gz-yvk">
+                                    <connections>
+                                        <action selector="setLamp2Brightness:" destination="bzh-EL-jVb" id="X6x-yV-Mbk"/>
+                                    </connections>
+                                </slider>
+                            </items>
+                        </group>
+                        <group width="1" alignment="left" layout="vertical" id="8Em-Vh-CDS">
+                            <items>
+                                <label alignment="left" text="Saturation" id="TpX-67-xFU">
+                                    <fontDescription key="font" style="UICTFontTextStyleSubhead"/>
+                                </label>
+                                <slider width="1" alignment="left" maximum="254" steps="1" id="0ow-EA-q5C">
+                                    <connections>
+                                        <action selector="setLamp2Saturation:" destination="bzh-EL-jVb" id="Vsy-VJ-kOz"/>
+                                    </connections>
+                                </slider>
+                            </items>
+                        </group>
                         <separator alignment="left" id="TGA-Vh-wWp"/>
                         <group width="1" alignment="left" id="bd5-8N-Hr0">
                             <items>
@@ -65,6 +141,42 @@
                                 </button>
                             </items>
                         </group>
+                        <group width="1" alignment="center" layout="vertical" id="P1B-hV-iM0">
+                            <items>
+                                <label alignment="left" verticalAlignment="center" text="Hue" id="3gx-3r-l7n">
+                                    <fontDescription key="font" style="UICTFontTextStyleSubhead"/>
+                                </label>
+                                <slider width="1" alignment="right" verticalAlignment="center" maximum="65535" steps="1" id="5kq-Tm-4HU">
+                                    <connections>
+                                        <action selector="setLamp3Hue:" destination="bzh-EL-jVb" id="KVi-va-UBV"/>
+                                    </connections>
+                                </slider>
+                            </items>
+                        </group>
+                        <group width="1" alignment="left" layout="vertical" id="K8P-c7-K9H">
+                            <items>
+                                <label alignment="left" text="Brightness" id="jb0-8e-a83">
+                                    <fontDescription key="font" style="UICTFontTextStyleSubhead"/>
+                                </label>
+                                <slider width="1" alignment="left" maximum="254" steps="1" id="w3c-GL-WUU">
+                                    <connections>
+                                        <action selector="setLamp3Brightness:" destination="bzh-EL-jVb" id="d0P-8Y-vCQ"/>
+                                    </connections>
+                                </slider>
+                            </items>
+                        </group>
+                        <group width="1" alignment="left" layout="vertical" id="VNK-g3-a4p">
+                            <items>
+                                <label alignment="left" text="Saturation" id="Zs3-Eb-oxf">
+                                    <fontDescription key="font" style="UICTFontTextStyleSubhead"/>
+                                </label>
+                                <slider width="1" alignment="left" maximum="254" steps="1" id="arS-y1-pma">
+                                    <connections>
+                                        <action selector="setLamp3Saturation:" destination="bzh-EL-jVb" id="zOX-Lh-89c"/>
+                                    </connections>
+                                </slider>
+                            </items>
+                        </group>
                     </items>
                     <connections>
                         <outlet property="lamp1Button" destination="XX9-x1-PlH" id="cZv-Fl-tcz"/>
@@ -73,7 +185,7 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="220" y="345"/>
+            <point key="canvasLocation" x="220" y="344.75"/>
         </scene>
     </scenes>
 </document>
