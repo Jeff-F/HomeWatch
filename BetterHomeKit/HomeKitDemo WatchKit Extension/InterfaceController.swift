@@ -66,7 +66,7 @@ class InterfaceController: WKInterfaceController {
 	}
 	
 	@IBAction func setLamp2Brightness(value: Float) {
-		lampController.setHue(lamp2, value: value)
+		lampController.setBrightness(lamp2, value: value)
 	}
 	
 	@IBAction func setLamp2Saturation(value: Float) {

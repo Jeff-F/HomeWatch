@@ -51,19 +51,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		switch operation {
 		case "on" :
 			self.lampState[deviceId - 1] = true
-			HomeKitService.sharedInstance.onLamp(3, reply)
+			HomeKitService.sharedInstance.onLamp(deviceId, reply)
 		case "off" :
 			self.lampState[deviceId - 1] = false
-			HomeKitService.sharedInstance.offLamp(3, reply)
+			HomeKitService.sharedInstance.offLamp(deviceId, reply)
 		case "hue" :
 			var value = userDictionary.valueForKey("value") as Int
-			HomeKitService.sharedInstance.setHue(3, value: value, reply)
+			HomeKitService.sharedInstance.setHue(deviceId, value: value, reply)
 		case "brightness" :
 			var value = userDictionary.valueForKey("value") as Int
-			HomeKitService.sharedInstance.setBrightness(3, value: value, reply)
+			HomeKitService.sharedInstance.setBrightness(deviceId, value: value, reply)
 		case "saturation" :
 			var value = userDictionary.valueForKey("value") as Int
-			HomeKitService.sharedInstance.setSaturation(3, value: value, reply)
+			HomeKitService.sharedInstance.setSaturation(deviceId, value: value, reply)
 		default :
 			return
 		}
