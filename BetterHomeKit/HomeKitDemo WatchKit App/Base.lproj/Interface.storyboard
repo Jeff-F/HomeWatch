@@ -134,7 +134,7 @@
                                 <label alignment="left" verticalAlignment="center" text="Hue" id="WdD-at-UuX">
                                     <fontDescription key="font" style="UICTFontTextStyleSubhead"/>
                                 </label>
-                                <slider width="1" alignment="right" verticalAlignment="center" maximum="65535" steps="1" id="T1w-4s-DSR">
+                                <slider width="1" alignment="right" verticalAlignment="center" continuous="YES" maximum="64000" steps="32" id="T1w-4s-DSR">
                                     <connections>
                                         <action selector="setLamp2Hue:" destination="bzh-EL-jVb" id="4el-UG-n73"/>
                                     </connections>
@@ -146,7 +146,7 @@
                                 <label alignment="left" text="Brightness" id="fXy-cP-jWC">
                                     <fontDescription key="font" style="UICTFontTextStyleSubhead"/>
                                 </label>
-                                <slider width="1" alignment="left" maximum="254" steps="1" id="oG6-Gz-yvk">
+                                <slider width="1" alignment="left" continuous="YES" maximum="250" steps="25" id="oG6-Gz-yvk">
                                     <connections>
                                         <action selector="setLamp2Brightness:" destination="bzh-EL-jVb" id="X6x-yV-Mbk"/>
                                     </connections>
@@ -158,7 +158,7 @@
                                 <label alignment="left" text="Saturation" id="TpX-67-xFU">
                                     <fontDescription key="font" style="UICTFontTextStyleSubhead"/>
                                 </label>
-                                <slider width="1" alignment="left" maximum="254" steps="1" id="0ow-EA-q5C">
+                                <slider width="1" alignment="left" continuous="YES" maximum="254" steps="25" id="0ow-EA-q5C">
                                     <connections>
                                         <action selector="setLamp2Saturation:" destination="bzh-EL-jVb" id="Vsy-VJ-kOz"/>
                                     </connections>
@@ -181,7 +181,7 @@
                                 <label alignment="left" verticalAlignment="center" text="Hue" id="3gx-3r-l7n">
                                     <fontDescription key="font" style="UICTFontTextStyleSubhead"/>
                                 </label>
-                                <slider width="1" alignment="right" verticalAlignment="center" maximum="65535" steps="1" id="5kq-Tm-4HU">
+                                <slider width="1" alignment="right" verticalAlignment="center" continuous="YES" maximum="64000" steps="32" id="5kq-Tm-4HU">
                                     <connections>
                                         <action selector="setLamp3Hue:" destination="bzh-EL-jVb" id="KVi-va-UBV"/>
                                     </connections>
@@ -193,7 +193,7 @@
                                 <label alignment="left" text="Brightness" id="jb0-8e-a83">
                                     <fontDescription key="font" style="UICTFontTextStyleSubhead"/>
                                 </label>
-                                <slider width="1" alignment="left" maximum="254" steps="1" id="w3c-GL-WUU">
+                                <slider width="1" alignment="left" continuous="YES" maximum="250" steps="25" id="w3c-GL-WUU">
                                     <connections>
                                         <action selector="setLamp3Brightness:" destination="bzh-EL-jVb" id="d0P-8Y-vCQ"/>
                                     </connections>
@@ -205,7 +205,7 @@
                                 <label alignment="left" text="Saturation" id="Zs3-Eb-oxf">
                                     <fontDescription key="font" style="UICTFontTextStyleSubhead"/>
                                 </label>
-                                <slider width="1" alignment="left" maximum="254" steps="1" id="arS-y1-pma">
+                                <slider width="1" alignment="left" continuous="YES" maximum="250" steps="25" id="arS-y1-pma">
                                     <connections>
                                         <action selector="setLamp3Saturation:" destination="bzh-EL-jVb" id="zOX-Lh-89c"/>
                                     </connections>

@@ -48,8 +48,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let userDictionary = userInfo as NSDictionary
         var operation = userDictionary.valueForKey("operation") as String
         
-        
         var deviceId = userDictionary.valueForKey("device_id") as Int
+
         
         switch operation {
         case "on" :

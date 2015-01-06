@@ -9,9 +9,9 @@
 import UIKit
 import HomeKit
 
-let LAMP_ACCESSORY_1  = 3
-let LAMP_ACCESSORY_2 = 1
-let LAMP_ACCESSORY_3 = 2
+let LAMP_ACCESSORY_1  = "Hue Lamp"
+let LAMP_ACCESSORY_2 = "Hue Lamp 1"
+let LAMP_ACCESSORY_3 = "Hue Lamp 2"
 
 let BULB_SERVICE = 1
 
@@ -43,8 +43,8 @@ class HomeKitService: NSObject, HMAccessoryDelegate {
 	// MARK: Common use functions
 	
 	func retrieveCharacteristics(lampId : Int) -> [AnyObject]! {
-		
-		var hardwareLampId = 0
+		var characteristics : [HMCharacteristic] = []
+		var hardwareLampId = "Hue Lamp"
 		switch (lampId) {
 		case 1:
 			hardwareLampId = LAMP_ACCESSORY_1
@@ -59,11 +59,14 @@ class HomeKitService: NSObject, HMAccessoryDelegate {
 			println("Error getting hardware lamp id: \(lampId)")
 		}
 		
-		let accessory = Core.sharedInstance.currentHome!.accessories[hardwareLampId] as HMAccessory
-		
-		service = accessory.services[BULB_SERVICE] as? HMService
-		
-		return service!.characteristics
+		for accessory in Core.sharedInstance.currentHome!.accessories as [HMAccessory] {
+			println(accessory.name)
+			if (accessory.name == hardwareLampId) {
+				service = accessory.services[BULB_SERVICE] as? HMService
+				characteristics = service!.characteristics as [HMCharacteristic]
+			}
+		}
+		return characteristics
 	}
 	
 	func setCharacteristicValue(lampId : Int, object : HMCharacteristic, value : Int, reply: (([NSObject : AnyObject]!) -> Void)!) {
