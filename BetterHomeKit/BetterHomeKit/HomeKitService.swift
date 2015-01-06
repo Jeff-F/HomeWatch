@@ -9,6 +9,17 @@
 import UIKit
 import HomeKit
 
+let LAMP_ACCESSORY_1  = 3
+let LAMP_ACCESSORY_2 = 2
+let LAMP_ACCESSORY_3 = 1
+
+let BULB_SERVICE = 1
+
+let POWER_CHARACTERISTIC = 0
+let BRIGHTNESS_CHARACTERISTIC = 1
+let HUE_CHARACTERISTIC = 2
+let SATURATION_CHARACTERISTIC = 3
+
 class HomeKitService: NSObject, HMAccessoryDelegate {
     
     weak var homeManager:HMHomeManager?
@@ -29,133 +40,129 @@ class HomeKitService: NSObject, HMAccessoryDelegate {
         return Static.instance!
     }
     
+    // MARK: Common use functions
     
+    func retrieveCharacteristics(lampId : Int) -> NSArray {
     
-    
-    func onLamp(lampId : Int, reply: (([NSObject : AnyObject]!) -> Void)!) {
-        var characteristics = [HMCharacteristic]()
-
-
-        
-        println("ON Lamp id: \(lampId)")
-
-        
-//        if Core.sharedInstance.currentHome? != nil {
-//            self.accessories.removeAll(keepCapacity: false)
-//            if let accessories = Core.sharedInstance.currentHome!.accessories as? [HMAccessory] {
-//                for accessory in accessories {
-//                    if !contains(accessories, accessory) {
-//                        self.accessories.insert(accessory, atIndex: 0)
-//                        accessory.delegate = self
-//                    }
-//                }
-//            }
-//        }
-
-        let accessory = Core.sharedInstance.currentHome!.accessories[lampId] as HMAccessory
-        
-//        services.removeAll(keepCapacity: true)
-//        if let accessory = accessory {
-//            for service in accessory.services as [HMService] {
-//                if !contains(services, service) {
-//                    services.append(service)
-//                }
-//            }
-//        }
-        
-        service = accessory.services[1] as? HMService
-        
-//        characteristics.removeAll(keepCapacity: true)
-//        
-//        // Update the user interface for the detail item.
-//        for characteristic in service!.characteristics as [HMCharacteristic] {
-////            NSLog("CharDes: \(characteristic.characteristicTypeDescription())")
-////            if colorButton?.enabled == true {
-////                if characteristic.characteristicType == (HMCharacteristicTypeBrightness as String) {
-////                    brightnessCharacteristic = characteristic
-////                }
-////                
-////                if characteristic.characteristicType == (HMCharacteristicTypeHue as String) {
-////                    hueCharacteristic = characteristic
-////                }
-////                
-////                if characteristic.characteristicType == (HMCharacteristicTypeSaturation as String) {
-////                    saturationCharacteristic = characteristic
-////                }
-////                
-////                if characteristic.characteristicType == (HMCharacteristicTypePowerState as String) {
-////                    onCharacteristic = characteristic
-////                }
-////            }
-//            
-//            if !contains(characteristics, characteristic) {
-//                characteristics.append(characteristic)
-//            }
-//        }
-
-
-        
-        
-        self.onCharacteristic(lampId, object: service!.characteristics[0] as HMCharacteristic, reply)
-        
-        // let object = characteristics[indexPath.row] as HMCharacteristic
-        
+    var hardwareLampId = 0
+    switch (lampId) {
+    case 1:
+        hardwareLampId = LAMP_ACCESSORY_1
+        break
+    case 2:
+        hardwareLampId = LAMP_ACCESSORY_2
+        break
+    case 3:
+        hardwareLampId = LAMP_ACCESSORY_3
+        break
+    default:
+        println("Error getting hardware lamp id: \(lampId)")
     }
     
-    func offLamp(lampId : Int) {
-        println("OFF Lamp id: \(lampId)")
+        let accessory = Core.sharedInstance.currentHome!.accessories[hardwareLampId] as HMAccessory
+    
+        service = accessory.services[BULB_SERVICE] as? HMService
+    
+        return service!.characteristics
     }
     
-    
-    func onCharacteristic(lampId : Int, object : HMCharacteristic, reply: (([NSObject : AnyObject]!) -> Void)!) {
+    func setCharacteristicValue(lampId : Int, object : HMCharacteristic, value : AnyObject, reply: (([NSObject : AnyObject]!) -> Void)!) {
         
         var result = 0
         var replyInfo = NSMutableDictionary()
-
-        
-        var charDesc = object.characteristicType
-        
-        if let desc = HomeKitUUIDs[object.characteristicType] {
-            charDesc = desc
-        }
         
         switch (object.metadata.format as NSString) {
         case HMCharacteristicMetadataFormatBool:
-            if (object.value != nil) {
-
-                object.writeValue(!(object.value as Bool), completionHandler:
-                    {
-                        (error:NSError!) in
-                        if (error != nil) {
-                            NSLog("Change Char Error: \(error)")
-                            replyInfo.setValue("Error", forKey: "error")
-                            
-                            reply(replyInfo)
-                        } else {
-                            result = object.value as Int
-                            
-                            replyInfo.setValue(lampId, forKey: "device_id")
-                            replyInfo.setValue(result == 0 ? false : true, forKey: "device_state")
-                            replyInfo.setValue("Hola mundo", forKey: "comments")
-                            
-                            reply(replyInfo)
-                            
-                        }
+            
+            // TODO TRANSFORM Value to string
+            object.writeValue(!(object.value as Bool), completionHandler:
+                {
+                    (error:NSError!) in
+                    if (error != nil) {
+                        NSLog("Change Char Error: \(error)")
+                        replyInfo.setValue("Error", forKey: "error")
+                        
+                        reply(replyInfo)
+                    } else {
+                        result = object.value as Int
+                        
+                        replyInfo.setValue(lampId, forKey: "device_id")
+                        replyInfo.setValue(result == 0 ? false : true, forKey: "result")
+                        replyInfo.setValue("Hola mundo", forKey: "comments")
+                        
+                        reply(replyInfo)
+                        
                     }
-                )
-            }
+                }
+            )
+        case HMCharacteristicMetadataFormatInt,HMCharacteristicMetadataFormatFloat,HMCharacteristicMetadataFormatUInt8,HMCharacteristicMetadataFormatUInt16,HMCharacteristicMetadataFormatUInt32,HMCharacteristicMetadataFormatUInt64:
+            let f = NSNumberFormatter()
+            f.numberStyle = NSNumberFormatterStyle.DecimalStyle
+            
+            object.writeValue(f.numberFromString(value as String), completionHandler:
+                {
+                    (error:NSError!) in
+                    if (error != nil) {
+                        NSLog("Change Char Error: \(error)")
+                        replyInfo.setValue("Error", forKey: "error")
+                        
+                        reply(replyInfo)
+                    } else {
+                        result = object.value as Int
+                        
+                        replyInfo.setValue(lampId, forKey: "device_id")
+                        replyInfo.setValue(result, forKey: "result")
+                        replyInfo.setValue("Hola mundo", forKey: "comments")
+                        
+                        reply(replyInfo)
+                        
+                    }
+                }
+            )
         default:
             NSLog("Unsupported")
         }
     }
     
+    // MARK: Power functions
+    
+    func onLamp(lampId : Int, reply: (([NSObject : AnyObject]!) -> Void)!) {
+        var characteristics = [HMCharacteristic]()
+        
+        characteristics = self.retrieveCharacteristics(lampId) as [HMCharacteristic];()
+        
+        var charDesc = characteristics[0].characteristicType
+        if let desc = HomeKitUUIDs[characteristics[0].characteristicType] {
+            charDesc = desc
+        }
+
+        // TODO Replace the value of value for a real value
+        self.setCharacteristicValue(lampId, object: characteristics[POWER_CHARACTERISTIC] as HMCharacteristic, value: accessory as HMAccessory, reply)
+    }
+    
+    func offLamp(lampId : Int, reply: (([NSObject : AnyObject]!) -> Void)!) {
+        println("OFF Lamp id: \(lampId)")
+    }
+
+    // MARK: Brightness functions
+    
+    func setBrightness(lampId : Int, value : AnyObject, reply: (([NSObject : AnyObject]!) -> Void)!) {
+        var characteristics = [HMCharacteristic]()
+        
+        characteristics = self.retrieveCharacteristics(lampId)
+        
+        
+        // TODO Replace the value of value for a real value
+        self.setCharacteristicValue(lampId, object: characteristics[BRIGHTNESS_CHARACTERISTIC] as HMCharacteristic, value: accessory as HMAccessory, reply)
+    }
+
+    // MARK: HMAccessoryDelegate functions
     
     func accessory(accessory: HMAccessory!, service: HMService!, didUpdateValueForCharacteristic characteristic: HMCharacteristic!)
     {
         NSLog("HOME SERVICE didUpdateValueForCharacteristic:\(characteristic)")
-//        NSNotificationCenter.defaultCenter().postNotificationName(characteristicUpdateNotification, object: nil, userInfo: ["accessory":accessory,"service":service,"characteristic":characteristic])
     }
-
+    
     
 }
 
