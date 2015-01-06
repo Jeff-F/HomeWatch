@@ -58,6 +58,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		case "hue" :
 			var value = userDictionary.valueForKey("value") as Int
 			HomeKitService.sharedInstance.setHue(3, value: value, reply)
+		case "brightness" :
+			var value = userDictionary.valueForKey("value") as Int
+			HomeKitService.sharedInstance.setBrightness(3, value: value, reply)
+		case "saturation" :
+			var value = userDictionary.valueForKey("value") as Int
+			HomeKitService.sharedInstance.setSaturation(3, value: value, reply)
 		default :
 			return
 		}

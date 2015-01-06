@@ -29,18 +29,18 @@ class LampController {
 					if (replyInfo != nil) {
 						var reply = replyInfo as NSDictionary
 						var lampId = reply.valueForKey("device_id") as Int
-						var state = reply.valueForKey("device_state") as Bool
+						var result = reply.valueForKey("result") as Int
                         var comments = reply.valueForKey("comments") as String
 
                         println(comments)
-						if (lamp.getId() != 3) {
-							println("Device ID does not match")
-						} else {
-							if (lamp.getState() != state) {
+//						if (lamp.getId() != 3) {
+//							println("Device ID does not match")
+//						} else {
+							if (lamp.getState() != (result == 0 ? false : true)) {
 								lamp.switchState()
 							}
 							updateLampStates()
-						}
+//						}
 					}
                 }
         })) {
@@ -81,9 +81,8 @@ class LampController {
 					if (replyInfo != nil) {
 						var reply = replyInfo as NSDictionary
 						var lampId = reply.valueForKey("device_id") as Int
-						var characteristic = reply.valueForKey("characteristic") as Bool
-						var value = reply.valueForKey("value") as String
-						println("Device \(lampId); characteristic: \(characteristic); value: \(value)")
+						var result = reply.valueForKey("result") as Int
+						println("Device \(lampId); characteristic: \(characteristic); value: \(result)")
 					}
 				}
 		})) {
