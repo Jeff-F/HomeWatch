@@ -37,6 +37,8 @@
         _hueCentral = [[PHHueSDK alloc]init];
         [_hueCentral startUpSDK];
         
+        [_hueCentral setBridgeToUseWithIpAddress:@"192.168.50.41" macAddress:@"0:17:88:12:f0:7d"];
+
         [[PHNotificationManager defaultManager] registerObject:self withSelector:@selector(localConnection) forNotification:LOCAL_CONNECTION_NOTIFICATION];
         [[PHNotificationManager defaultManager] registerObject:self withSelector:@selector(noLocalConnection) forNotification:NO_LOCAL_CONNECTION_NOTIFICATION];
         [[PHNotificationManager defaultManager] registerObject:self withSelector:@selector(notAuthenticated) forNotification:NO_LOCAL_AUTHENTICATION_NOTIFICATION];
